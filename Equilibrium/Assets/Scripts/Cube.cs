@@ -18,9 +18,20 @@ public class Cube : MonoBehaviour
 				GetComponent<ReleaseGesture> ().Released -= releasedHandler;
 		}
 
+		private  int RoundOff (float i)
+		{
+				return ((int)Math.Round (i / 1.0)) * 1;
+		}
+
 		private void releasedHandler (object sender, EventArgs e)
 		{
 				Destroy (GetComponent<PanGesture> ());
+			
+				Vector3 pos = gameObject.transform.position;
+				pos.x = RoundOff (pos.x);
+				pos.y = RoundOff (pos.y);
+
+				gameObject.transform.position = pos;
 		}
 	
 		private void pressedHandler (object sender, EventArgs e)
