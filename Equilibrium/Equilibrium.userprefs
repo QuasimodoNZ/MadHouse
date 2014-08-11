@@ -1,10 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Cube.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Cube.cs">
     <Files>
-      <File FileName="Assets/TouchScript/Examples/General/Pan/Scripts/Pan_Object.cs" Line="19" Column="15" />
-      <File FileName="Assets/Scripts/Cube.cs" Line="22" Column="4" />
-      <File FileName="Assets/TouchScript/Examples/General/Pan/Scripts/Pan_Button.cs" Line="27" Column="4" />
+      <File FileName="Assets\Scripts\Cube.cs" Line="26" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
