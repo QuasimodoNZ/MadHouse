@@ -21,6 +21,9 @@ public class Cube : MonoBehaviour
 		private void releasedHandler (object sender, EventArgs e)
 		{
 				Destroy (GetComponent<PanGesture> ());
+				var pos = gameObject.transform.position;
+				pos.z = 0.0f;
+				gameObject.transform.position = pos;
 		}
 	
 		private void pressedHandler (object sender, EventArgs e)
@@ -29,6 +32,9 @@ public class Cube : MonoBehaviour
 						return;
 				var obj = Instantiate (gameObject) as GameObject;
 				obj.name = (gameObject.name);
+				var pos = obj.transform.position;
+				pos.z = -3.0f;
+				gameObject.transform.position = pos;
 				//gameObject.name = "placed" + gameObject.name;
 				stance++;
 		}
