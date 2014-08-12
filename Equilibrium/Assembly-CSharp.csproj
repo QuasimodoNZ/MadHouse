@@ -47,18 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Cube.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.BACKUP.7720.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.BACKUP.7740.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.BACKUP.924.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.BASE.7720.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.BASE.7740.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.BASE.924.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.LOCAL.7720.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.LOCAL.7740.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.LOCAL.924.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.REMOTE.7720.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.REMOTE.7740.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs.REMOTE.924.cs" />
      <Compile Include="Assets\TouchScript\Examples\General\2D - Double Tap\Scripts\DoubleTap_Sprite.cs" />
      <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Button.cs" />
      <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Panel.cs" />
@@ -73,10 +61,10 @@
      <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Example.cs" />
      <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Examples.cs" />
  <Reference Include="TouchScript">
- <HintPath>C:/Users/user/Documents/MadHouse/Equilibrium/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
+ <HintPath>C:/Users/Somfin/Documents/Equilibrium/Equilibrium/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
  <Reference Include="TouchScript.Windows">
- <HintPath>C:/Users/user/Documents/MadHouse/Equilibrium/Assets/TouchScript/Plugins/TouchScript.Windows.dll</HintPath>
+ <HintPath>C:/Users/Somfin/Documents/Equilibrium/Equilibrium/Assets/TouchScript/Plugins/TouchScript.Windows.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
