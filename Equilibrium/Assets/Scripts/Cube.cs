@@ -49,16 +49,18 @@ public class Cube : MonoBehaviour
 			GameObject.Destroy(gameObject);
 			return;
 		}
-		var obj = Instantiate (gameObject) as GameObject;
-		obj.name = (gameObject.name);
-		obj.GetComponent<Cube> ().enabled = true;
-		obj.GetComponent<TapGesture> ().enabled = true;
-		obj.transform.parent = gameObject.transform.parent;
-		var pos = obj.transform.position;
-		pos.z = -3.0f;
-		gameObject.transform.position = pos;
-		//gameObject.name = "placed" + gameObject.name;
-		state = BuildingState.Dragging;
+		if (state == BuildingState.Pallet) {
+			var obj = Instantiate (gameObject) as GameObject;
+			obj.name = (gameObject.name);
+			obj.GetComponent<Cube> ().enabled = true;
+			obj.GetComponent<TapGesture> ().enabled = true;
+			obj.transform.parent = gameObject.transform.parent;
+			var pos = obj.transform.position;
+			pos.z = -3.0f;
+			gameObject.transform.position = pos;
+			//gameObject.name = "placed" + gameObject.name;
+			state = BuildingState.Dragging;
+		}
 	}
 	
 }
