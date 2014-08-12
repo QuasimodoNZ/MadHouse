@@ -83,7 +83,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 85071989}
   - 33: {fileID: 85071988}
-  - 65: {fileID: 85071987}
   - 23: {fileID: 85071986}
   m_Layer: 0
   m_Name: Grassy Field
@@ -112,18 +111,6 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &85071987
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 85071985}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &85071988
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -158,6 +145,7 @@ GameObject:
   - 114: {fileID: 91568412}
   - 114: {fileID: 91568411}
   - 114: {fileID: 91568410}
+  - 54: {fileID: 91568420}
   - 114: {fileID: 91568418}
   - 114: {fileID: 91568419}
   m_Layer: 0
@@ -279,10 +267,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 2008559236}
   m_GameObject: {fileID: 91568409}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &91568416
 MeshFilter:
@@ -303,7 +291,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1987900467}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!114 &91568418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +327,22 @@ MonoBehaviour:
   numberOfTapsRequired: 1
   timeLimit: Infinity
   distanceLimit: Infinity
+--- !u!54 &91568420
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: a267dc8ea33a7493db6998ea5fbcfe02,
+    type: 2}
+  m_PrefabInternal: {fileID: 2008559236}
+  m_GameObject: {fileID: 91568409}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &144984794
 Prefab:
   m_ObjectHideFlags: 0
@@ -388,7 +392,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e63e06916310140efbd73de5b46cc518, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400006, guid: e63e06916310140efbd73de5b46cc518, type: 2}
       propertyPath: friendlyGestures.Array.data[0]
@@ -535,6 +539,7 @@ GameObject:
   - 114: {fileID: 856681279}
   - 114: {fileID: 856681278}
   - 114: {fileID: 856681286}
+  - 54: {fileID: 856681288}
   - 114: {fileID: 856681287}
   m_Layer: 0
   m_Name: GreenCube
@@ -653,10 +658,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 144984794}
   m_GameObject: {fileID: 856681277}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &856681284
 MeshFilter:
@@ -677,7 +682,7 @@ Transform:
   m_LocalScale: {x: 1.0087533, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1987900467}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &856681286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,6 +719,22 @@ MonoBehaviour:
   numberOfTapsRequired: 1
   timeLimit: Infinity
   distanceLimit: Infinity
+--- !u!54 &856681288
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: e63e06916310140efbd73de5b46cc518,
+    type: 2}
+  m_PrefabInternal: {fileID: 144984794}
+  m_GameObject: {fileID: 856681277}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &961882921
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +944,7 @@ GameObject:
   - 114: {fileID: 1687104864}
   - 114: {fileID: 1687104863}
   - 114: {fileID: 1687104871}
+  - 54: {fileID: 1687104873}
   - 114: {fileID: 1687104872}
   m_Layer: 0
   m_Name: RedCube
@@ -1041,10 +1063,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 1816247109}
   m_GameObject: {fileID: 1687104862}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1687104869
 MeshFilter:
@@ -1065,7 +1087,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1987900467}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &1687104871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,6 +1124,22 @@ MonoBehaviour:
   numberOfTapsRequired: 1
   timeLimit: Infinity
   distanceLimit: Infinity
+--- !u!54 &1687104873
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 1f47ad82ba68b4792b9fda88db7590de,
+    type: 2}
+  m_PrefabInternal: {fileID: 1816247109}
+  m_GameObject: {fileID: 1687104862}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1696615239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,7 +1258,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1f47ad82ba68b4792b9fda88db7590de, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 1f47ad82ba68b4792b9fda88db7590de, type: 2}
       propertyPath: friendlyGestures.Array.data[0]
@@ -1310,9 +1348,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 91568417}
   - {fileID: 1687104870}
   - {fileID: 856681285}
-  - {fileID: 91568417}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1001 &2008559236
@@ -1360,7 +1398,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a267dc8ea33a7493db6998ea5fbcfe02, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400006, guid: a267dc8ea33a7493db6998ea5fbcfe02, type: 2}
       propertyPath: friendlyGestures.Array.data[1]
