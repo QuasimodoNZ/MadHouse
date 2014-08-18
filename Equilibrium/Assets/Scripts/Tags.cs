@@ -3,25 +3,25 @@ using System.Collections;
 
 public class Tags : MonoBehaviour {
 
-	public static string Built = "Built";
+	public const string Built = "Built";
 
-	public static string Respawn = "Respawn";
+	public const string Respawn = "Respawn";
 
-	public static string Finish = "Finish";
+	public const string Finish = "Finish";
 
-	public static string Player = "Player";
+	public const string Player = "Player";
 
-	public static string GameController = "GameController";
+	public const string GameController = "GameController";
 
-	public static string Pallet = "Pallet";
+	public const string Pallet = "Pallet";
 
-	public static string Interface = "Interface";
+	public const string Interface = "Interface";
 
-	public static string Placing = "Placing";
+	public const string Placing = "Placing";
 
-	public static string SourceBuilding = "SourceBuilding";
+	public const string Draggable = "Draggable";
 
-	public static string Resource = "Resource";
+	public const string Resource = "Resource";
 
-	public static string UtilisedResource = "UtilisedResource";
+	public const string UtilisedResource = "UtilisedResource";
 }
