@@ -41,6 +41,14 @@ public class Blueprint : MonoBehaviour
 						collidingObjects.Add (other.gameObject);
 				}
 		}
+		void OnTriggerStay (Collider other)
+		{
+				if (other.gameObject.tag == Tags.Built) {
+						gameObject.renderer.material.color = collidingColour;		
+						if (!collidingObjects.Contains (other.gameObject))
+								collidingObjects.Add (other.gameObject);
+				}
+		}
 
 		void OnTriggerExit (Collider other)
 		{
