@@ -5,10 +5,15 @@ using System;
 
 public class Clock : MonoBehaviour {
 
-	private int count = 0;
+	private int resource;
+	private int material;
+	private int gold;
 	public GUIText text;
 	// Use this for initialization
 	void Start () {
+		resource = 100;
+		material = 5;
+		gold = 0;
 	}
 	
 	// Update is called once per frame
@@ -30,9 +35,9 @@ public class Clock : MonoBehaviour {
 
 	private void releasedHandler (object sender, EventArgs e)
 	{
-		Debug.LogWarning ("HELP!!!");
+		Debug.LogWarning ("Taking turn!");
 		nextTurn ();
-		text.text = Convert.ToString (count);
+		text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource);
 	}
 
 	private void pressedHandler (object sender, EventArgs e)
@@ -40,8 +45,26 @@ public class Clock : MonoBehaviour {
 		Debug.LogWarning("do I work?");
 	}
 
-	public int getCount(){
-		return count;
+	public int getGold(){
+		return gold;
+	}
+
+	public int getResources(){
+		return resource;
+	}
+
+	public int getMaterial(){
+		return material;
+	}
+
+	public void spendMaterial(int amount){
+		material = material - amount;
+		text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+	}
+
+	public void ruinEnvironment (int amount){
+		resource = resource - amount;
+		text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 	}
 
 	public void nextTurn(){
@@ -50,8 +73,23 @@ public class Clock : MonoBehaviour {
 			var ticker = o.GetComponent<Cube>();
 			if (ticker != null){
 				ticker.tick ();
-				count++;
+				gold++;
+				material++;
+				resource--;
 			}
+		}
+		if (resource < 1) {
+			var down = GameObject.FindGameObjectsWithTag (Tags.Draggable);
+			foreach (GameObject o in down) {
+				o.renderer.material.color = Color.black;
+				o.GetComponent<PressGesture>().enabled = false;
+				o.GetComponent<PanGesture>().enabled = false;
+			}
+			foreach (GameObject o in collect) {
+				o.renderer.material.color = Color.black;
+				o.GetComponent<PressGesture>().enabled = false;
+			}
+			OnDisable();
 		}
 	}
 }

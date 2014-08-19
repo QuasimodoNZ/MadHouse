@@ -43,8 +43,9 @@ public class Cube : MonoBehaviour
 						pos.z = 0.0f;
 						gameObject.transform.position = pos;
 
-						if (isColliding)
+						if (isColliding){
 								Destroy (gameObject);
+						}
 
 						state = BuildingState.Built;
 				}
@@ -52,6 +53,19 @@ public class Cube : MonoBehaviour
 	
 		private void pressedHandler (object sender, EventArgs e)
 		{
+			var controller = GameObject.FindGameObjectWithTag (Tags.GameController);
+			var clock = controller.GetComponent<Clock> ();
+			if (clock == null) {
+			Debug.LogError ("Oh shit no clock!");
+		} else {
+			if (clock.getMaterial() < 1){
+				gameObject.GetComponent<PanGesture>().enabled = false;
+				return;
+			} else {
+				gameObject.GetComponent<PanGesture>().enabled = true;
+				clock.spendMaterial(1);
+			}
+		}
 				if (state == BuildingState.Built) {
 						GameObject.Destroy (gameObject);
 						return;
