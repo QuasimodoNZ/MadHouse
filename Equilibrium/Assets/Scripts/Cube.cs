@@ -67,6 +67,7 @@ public class Cube : MonoBehaviour
 						gameObject.transform.position = pos;
 						//gameObject.name = "placed" + gameObject.name;
 						state = BuildingState.Dragging;
+						tag = Tags.Built;
 				}
 		}
 
@@ -79,5 +80,7 @@ public class Cube : MonoBehaviour
 		{
 				isColliding = false;
 		}
-	
+		public void tick(){
+			gameObject.renderer.material.color = Color.white;
+		}
 }

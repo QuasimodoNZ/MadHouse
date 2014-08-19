@@ -290,7 +290,7 @@ GameObject:
   - 54: {fileID: 167776885}
   m_Layer: 0
   m_Name: Blue Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -665,33 +665,6 @@ Prefab:
   m_RootGameObject: {fileID: 1346608054}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &341784357
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100002, guid: bfdfbe2184a4baf4c83a850982be14d4, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 341784358}
-  m_Layer: 0
-  m_Name: RightPallet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &341784358
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400002, guid: bfdfbe2184a4baf4c83a850982be14d4, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 341784357}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2072878230}
-  m_RootOrder: 1
 --- !u!1 &344045379
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +838,7 @@ GameObject:
   - 54: {fileID: 501651558}
   m_Layer: 0
   m_Name: Green Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -878,7 +851,7 @@ Transform:
   m_GameObject: {fileID: 501651556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15.25, y: -1.20000005, z: -2}
-  m_LocalScale: {x: 1.0087533, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1386779880}
   m_RootOrder: 3
@@ -1078,7 +1051,7 @@ GameObject:
   - 54: {fileID: 566545678}
   m_Layer: 0
   m_Name: Blue Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1303,7 +1276,7 @@ Transform:
   - {fileID: 1755751036}
   - {fileID: 1816772244}
   m_Father: {fileID: 2072878230}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!1 &681349722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,7 +1355,7 @@ GameObject:
   - 54: {fileID: 777831522}
   m_Layer: 0
   m_Name: Red Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1605,7 +1578,7 @@ Transform:
   - {fileID: 777831521}
   - {fileID: 1753370943}
   m_Father: {fileID: 2072878230}
-  m_RootOrder: 5
+  m_RootOrder: 2
 --- !u!1 &881991456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1599,7 @@ GameObject:
   - 54: {fileID: 881991467}
   m_Layer: 0
   m_Name: Green Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1799,7 +1772,7 @@ Transform:
   m_GameObject: {fileID: 881991456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.20000005, y: 8.25, z: -2}
-  m_LocalScale: {x: 1.0087533, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1960067682}
   m_RootOrder: 3
@@ -1858,60 +1831,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!1 &925258445
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100016, guid: bfdfbe2184a4baf4c83a850982be14d4, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 925258446}
-  m_Layer: 0
-  m_Name: LeftPallet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &925258446
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400016, guid: bfdfbe2184a4baf4c83a850982be14d4, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 925258445}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2072878230}
-  m_RootOrder: 0
---- !u!1 &937738165
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100018, guid: bfdfbe2184a4baf4c83a850982be14d4, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 937738166}
-  m_Layer: 0
-  m_Name: TopPallet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &937738166
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400018, guid: bfdfbe2184a4baf4c83a850982be14d4, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 937738165}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2072878230}
-  m_RootOrder: 2
 --- !u!1 &961507103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,7 +1851,7 @@ GameObject:
   - 54: {fileID: 961507105}
   m_Layer: 0
   m_Name: Red Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2206,7 +2125,7 @@ GameObject:
   - 54: {fileID: 1040525011}
   m_Layer: 0
   m_Name: Blue Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2528,6 +2447,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ec1491d09fce25d4b951199a3185c546, type: 2}
+      propertyPath: m_TagString
+      value: Draggable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1491d09fce25d4b951199a3185c546, type: 2}
   m_RootGameObject: {fileID: 881991456}
@@ -2625,7 +2548,7 @@ GameObject:
   - 54: {fileID: 1287360086}
   m_Layer: 0
   m_Name: Blue Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3099,7 +3022,7 @@ Transform:
   - {fileID: 961507104}
   - {fileID: 501651557}
   m_Father: {fileID: 2072878230}
-  m_RootOrder: 6
+  m_RootOrder: 3
 --- !u!1 &1405004020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,7 +3231,7 @@ GameObject:
   - 54: {fileID: 1664934338}
   m_Layer: 0
   m_Name: Red Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3521,7 +3444,7 @@ GameObject:
   - 54: {fileID: 1753370944}
   m_Layer: 0
   m_Name: Green Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3534,7 +3457,7 @@ Transform:
   m_GameObject: {fileID: 1753370942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.25, y: 1.20000005, z: -2}
-  m_LocalScale: {x: 1.0087533, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 870617774}
   m_RootOrder: 3
@@ -3734,7 +3657,7 @@ GameObject:
   - 54: {fileID: 1755751037}
   m_Layer: 0
   m_Name: Red Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3991,7 +3914,7 @@ GameObject:
   - 54: {fileID: 1816772245}
   m_Layer: 0
   m_Name: Green Cube
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4004,7 +3927,7 @@ Transform:
   m_GameObject: {fileID: 1816772243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.20000005, y: -8.25, z: -2}
-  m_LocalScale: {x: 1.0087533, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 608180655}
   m_RootOrder: 3
@@ -4362,7 +4285,7 @@ Transform:
   - {fileID: 1664934337}
   - {fileID: 881991466}
   m_Father: {fileID: 2072878230}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!1 &2069046883
 GameObject:
   m_ObjectHideFlags: 0
@@ -4446,9 +4369,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 925258446}
-  - {fileID: 341784358}
-  - {fileID: 937738166}
   - {fileID: 1960067682}
   - {fileID: 608180655}
   - {fileID: 870617774}

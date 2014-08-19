@@ -45,6 +45,13 @@ public class Clock : MonoBehaviour {
 	}
 
 	public void nextTurn(){
-		count++;
+		var collect = GameObject.FindGameObjectsWithTag (Tags.Built);
+		foreach (GameObject o in collect) {
+			var ticker = o.GetComponent<Cube>();
+			if (ticker != null){
+				ticker.tick ();
+				count++;
+			}
+		}
 	}
 }
