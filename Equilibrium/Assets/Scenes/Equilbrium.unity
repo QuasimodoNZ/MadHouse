@@ -129,6 +129,7 @@ GameObject:
   - 33: {fileID: 85071988}
   - 65: {fileID: 85071987}
   - 23: {fileID: 85071986}
+  - 114: {fileID: 85071990}
   m_Layer: 0
   m_Name: Grassy Field
   m_TagString: Untagged
@@ -187,6 +188,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1205739809}
   m_RootOrder: 0
+--- !u!114 &85071990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 85071985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e6c542c00507840904887bbc1f30aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resource: {fileID: 100000, guid: 17cadf1c35b731843a6ac38aa18339ce, type: 2}
 --- !u!1 &112255419
 GameObject:
   m_ObjectHideFlags: 1
@@ -2592,6 +2605,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1205739809}
+  - 114: {fileID: 1205739810}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -2612,6 +2626,18 @@ Transform:
   - {fileID: 85071989}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1205739810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205739808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e6c542c00507840904887bbc1f30aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resource: {fileID: 100000, guid: 17cadf1c35b731843a6ac38aa18339ce, type: 2}
 --- !u!1 &1287360084
 GameObject:
   m_ObjectHideFlags: 0
