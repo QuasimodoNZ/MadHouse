@@ -4,11 +4,7 @@ using TouchScript.Gestures;
 
 public class Cube : MonoBehaviour
 {
-
-		//For the object that shows where the building will be placed
-		public GameObject blueprintPrefab;
-
-		private Blueprint blueprint = null;
+		private bool isColliding = false;
 
 		public enum BuildingState
 		{
@@ -32,32 +28,44 @@ public class Cube : MonoBehaviour
 				GetComponent<ReleaseGesture> ().Released -= releasedHandler;
 		}
 
+		private  int RoundOff (float i)
+		{
+				return ((int)Math.Round (i / 1.0)) * 1;
+		}
+
 		private void releasedHandler (object sender, EventArgs e)
 		{
 				if (state == BuildingState.Dragging) {
-						Vector3 pos = blueprint.transform.position;
-
-						if (blueprint.isColliding ()) {
-								Destroy (gameObject);
-								Destroy (blueprint.gameObject);
-								return;
-						}
-						Destroy (blueprint.gameObject);
-
-
 						Destroy (GetComponent<PanGesture> ());
-						pos.x = Blueprint.RoundOff (pos.x);
-						pos.y = Blueprint.RoundOff (pos.y);
+						Vector3 pos = gameObject.transform.position;
+						pos.x = RoundOff (pos.x);
+						pos.y = RoundOff (pos.y);
 						pos.z = 0.0f;
 						gameObject.transform.position = pos;
 
+						if (isColliding){
+								Destroy (gameObject);
+						}
+
 						state = BuildingState.Built;
-						gameObject.tag = Tags.Built;
 				}
 		}
 	
 		private void pressedHandler (object sender, EventArgs e)
 		{
+			var controller = GameObject.FindGameObjectWithTag (Tags.GameController);
+			var clock = controller.GetComponent<Clock> ();
+			if (clock == null) {
+			Debug.LogError ("Oh shit no clock!");
+		} else {
+			if (clock.getMaterial() < 1){
+				gameObject.GetComponent<PanGesture>().enabled = false;
+				return;
+			} else {
+				gameObject.GetComponent<PanGesture>().enabled = true;
+				clock.spendMaterial(1);
+			}
+		}
 				if (state == BuildingState.Built) {
 						GameObject.Destroy (gameObject);
 						return;
@@ -73,10 +81,20 @@ public class Cube : MonoBehaviour
 						gameObject.transform.position = pos;
 						//gameObject.name = "placed" + gameObject.name;
 						state = BuildingState.Dragging;
-
-						GameObject newBlueprint = (GameObject)GameObject.Instantiate (blueprintPrefab);
-						blueprint = newBlueprint.GetComponent<Blueprint> ();
-						blueprint.setParent (this.gameObject);
+						tag = Tags.Built;
 				}
+		}
+
+		void OnTriggerStay (Collider other)
+		{
+				isColliding = true;
+		}
+
+		void OnTriggerExit (Collider other)
+		{
+				isColliding = false;
+		}
+		public void tick(){
+			gameObject.renderer.material.color = Color.white;
 		}
 }
