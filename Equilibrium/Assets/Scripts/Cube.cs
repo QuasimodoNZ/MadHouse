@@ -4,7 +4,12 @@ using TouchScript.Gestures;
 
 public class Cube : MonoBehaviour
 {
-		private bool isColliding = false;
+
+		public GameObject blueprintPrefab;
+
+
+
+		private Blueprint blueprint = null;
 
 		public enum BuildingState
 		{
@@ -28,23 +33,23 @@ public class Cube : MonoBehaviour
 				GetComponent<ReleaseGesture> ().Released -= releasedHandler;
 		}
 
-		private  int RoundOff (float i)
-		{
-				return ((int)Math.Round (i / 1.0)) * 1;
-		}
-
 		private void releasedHandler (object sender, EventArgs e)
 		{
 				if (state == BuildingState.Dragging) {
+						Vector3 pos = blueprint.transform.position;
+						Destroy (blueprint);
+			
+						if (blueprint.isColliding ()) {
+								Destroy (gameObject);
+								return;
+						}
+
+
 						Destroy (GetComponent<PanGesture> ());
-						Vector3 pos = gameObject.transform.position;
-						pos.x = RoundOff (pos.x);
-						pos.y = RoundOff (pos.y);
+						pos.x = Blueprint.RoundOff (pos.x);
+						pos.y = Blueprint.RoundOff (pos.y);
 						pos.z = 0.0f;
 						gameObject.transform.position = pos;
-
-						if (isColliding)
-								Destroy (gameObject);
 
 						state = BuildingState.Built;
 				}
@@ -67,17 +72,10 @@ public class Cube : MonoBehaviour
 						gameObject.transform.position = pos;
 						//gameObject.name = "placed" + gameObject.name;
 						state = BuildingState.Dragging;
+
+						GameObject newBlueprint = (GameObject)GameObject.Instantiate (blueprintPrefab);
+						blueprint = newBlueprint.GetComponent<Blueprint> ();
+						blueprint.setParent (this.gameObject);
 				}
 		}
-
-		void OnTriggerStay (Collider other)
-		{
-				isColliding = true;
-		}
-
-		void OnTriggerExit (Collider other)
-		{
-				isColliding = false;
-		}
-	
 }
