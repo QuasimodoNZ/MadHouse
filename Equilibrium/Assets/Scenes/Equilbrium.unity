@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &167776888
 MonoBehaviour:
@@ -522,7 +523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6fe7c6952fcced64686127496fbd9ef7, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fe7c6952fcced64686127496fbd9ef7, type: 2}
@@ -566,7 +567,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0076b79a997d2074eb11faa26036e4f5, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0076b79a997d2074eb11faa26036e4f5, type: 2}
@@ -610,7 +611,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6fe7c6952fcced64686127496fbd9ef7, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fe7c6952fcced64686127496fbd9ef7, type: 2}
@@ -792,7 +793,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0076b79a997d2074eb11faa26036e4f5, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0076b79a997d2074eb11faa26036e4f5, type: 2}
@@ -881,7 +882,7 @@ Transform:
   m_LocalScale: {x: 1.0087533, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1386779880}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!54 &501651558
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -934,6 +935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &501651561
 MonoBehaviour:
@@ -1131,6 +1133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &566545671
 MonoBehaviour:
@@ -1398,7 +1401,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 870617774}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!54 &777831522
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1451,6 +1454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &777831525
 MonoBehaviour:
@@ -1600,10 +1604,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1932793096}
-  - {fileID: 1040525010}
   - {fileID: 777831521}
   - {fileID: 1753370943}
+  - {fileID: 1932793096}
+  - {fileID: 1040525010}
   m_Father: {fileID: 2072878230}
   m_RootOrder: 5
 --- !u!1 &881991456
@@ -1667,6 +1671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &881991459
 MonoBehaviour:
@@ -1948,7 +1953,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1386779880}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!54 &961507105
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2001,6 +2006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &961507108
 MonoBehaviour:
@@ -2222,7 +2228,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 870617774}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!54 &1040525011
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2275,6 +2281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &1040525014
 MonoBehaviour:
@@ -2641,7 +2648,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1386779880}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!54 &1287360086
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2694,6 +2701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &1287360089
 MonoBehaviour:
@@ -3094,10 +3102,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2069046884}
-  - {fileID: 1287360085}
   - {fileID: 961507104}
   - {fileID: 501651557}
+  - {fileID: 2069046884}
+  - {fileID: 1287360085}
   m_Father: {fileID: 2072878230}
   m_RootOrder: 6
 --- !u!1 &1405004020
@@ -3349,6 +3357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &1664934330
 MonoBehaviour:
@@ -3537,7 +3546,7 @@ Transform:
   m_LocalScale: {x: 1.0087533, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 870617774}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!54 &1753370944
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3590,6 +3599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &1753370947
 MonoBehaviour:
@@ -3803,6 +3813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &1755751040
 MonoBehaviour:
@@ -4060,6 +4071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
   state: 1
 --- !u!114 &1816772248
 MonoBehaviour:
@@ -4221,7 +4233,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ec1491d09fce25d4b951199a3185c546, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1491d09fce25d4b951199a3185c546, type: 2}
@@ -4256,7 +4268,7 @@ Transform:
   m_LocalScale: {x: 4, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 870617774}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!23 &1932793097
 Renderer:
   m_ObjectHideFlags: 0
@@ -4391,7 +4403,7 @@ Transform:
   m_LocalScale: {x: 4, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1386779880}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!23 &2069046885
 Renderer:
   m_ObjectHideFlags: 0
@@ -4492,7 +4504,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ec1491d09fce25d4b951199a3185c546, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1491d09fce25d4b951199a3185c546, type: 2}
