@@ -14,6 +14,7 @@ public class Clock : MonoBehaviour {
 		resource = 100;
 		material = 5;
 		gold = 0;
+		text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 	}
 	
 	// Update is called once per frame
@@ -37,7 +38,7 @@ public class Clock : MonoBehaviour {
 	{
 		Debug.LogWarning ("Taking turn!");
 		nextTurn ();
-		text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource);
+		text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 	}
 
 	private void pressedHandler (object sender, EventArgs e)

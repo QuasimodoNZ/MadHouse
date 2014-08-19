@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  blueprintPrefab: {fileID: 0}
   state: 1
 --- !u!114 &167776888
 MonoBehaviour:
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  blueprintPrefab: {fileID: 0}
   state: 1
 --- !u!114 &566545671
 MonoBehaviour:
@@ -2294,7 +2294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  blueprintPrefab: {fileID: 0}
   state: 1
 --- !u!114 &1040525014
 MonoBehaviour:
@@ -2458,7 +2458,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b2d9d3570eabb074997bbb4fe5ffae5a, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2d9d3570eabb074997bbb4fe5ffae5a, type: 2}
@@ -2548,6 +2548,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: ec1491d09fce25d4b951199a3185c546, type: 2}
+      propertyPath: blueprintPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1491d09fce25d4b951199a3185c546, type: 2}
   m_RootGameObject: {fileID: 881991456}
@@ -2727,7 +2731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  blueprintPrefab: {fileID: 0}
   state: 1
 --- !u!114 &1287360089
 MonoBehaviour:
@@ -3076,7 +3080,7 @@ GUIText:
   m_GameObject: {fileID: 1378974315}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 0
+  m_Text: 
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 10, y: 300}
@@ -4574,7 +4578,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b2d9d3570eabb074997bbb4fe5ffae5a, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2d9d3570eabb074997bbb4fe5ffae5a, type: 2}
