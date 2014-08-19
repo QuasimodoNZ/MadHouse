@@ -5,9 +5,8 @@ using TouchScript.Gestures;
 public class Cube : MonoBehaviour
 {
 
+		//For the object that shows where the building will be placed
 		public GameObject blueprintPrefab;
-
-
 
 		private Blueprint blueprint = null;
 
@@ -37,12 +36,13 @@ public class Cube : MonoBehaviour
 		{
 				if (state == BuildingState.Dragging) {
 						Vector3 pos = blueprint.transform.position;
-						Destroy (blueprint);
-			
+
 						if (blueprint.isColliding ()) {
 								Destroy (gameObject);
+								Destroy (blueprint.gameObject);
 								return;
 						}
+						Destroy (blueprint.gameObject);
 
 
 						Destroy (GetComponent<PanGesture> ());
@@ -52,6 +52,7 @@ public class Cube : MonoBehaviour
 						gameObject.transform.position = pos;
 
 						state = BuildingState.Built;
+						gameObject.tag = Tags.Built;
 				}
 		}
 	

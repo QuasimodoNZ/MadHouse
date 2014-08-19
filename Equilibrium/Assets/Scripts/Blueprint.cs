@@ -20,6 +20,8 @@ public class Blueprint : MonoBehaviour
 		void Start ()
 		{
 				//Starts off colliding with the cloned object
+				gameObject.renderer.material.color = collidingColour;		
+
 		}
 	
 		// Update is called once per frame
@@ -34,17 +36,17 @@ public class Blueprint : MonoBehaviour
 
 		void OnTriggerEnter (Collider other)
 		{
-				//if (other.gameObject.tag == Tags.Built)
-				
-				gameObject.renderer.material.color = collidingColour;		
-				collidingObjects.Add (other.gameObject);
+				if (other.gameObject.tag == Tags.Built) {
+						gameObject.renderer.material.color = collidingColour;		
+						collidingObjects.Add (other.gameObject);
+				}
 		}
 
 		void OnTriggerExit (Collider other)
 		{
 				collidingObjects.Remove (other.gameObject);	
-				//if (!isColliding ())
-				gameObject.renderer.material.color = unobstructedColour;
+				if (!isColliding ())
+						gameObject.renderer.material.color = unobstructedColour;
 		}
 
 		public bool isColliding ()
