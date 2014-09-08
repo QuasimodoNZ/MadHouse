@@ -45,7 +45,7 @@ public class Cube : MonoBehaviour
 				return;
 			}
 			Destroy (blueprint.gameObject);
-			Destroy (GetComponent<PanGesture>());
+			GetComponent<PanGesture>().enabled = false;
 			pos.x = RoundOff (pos.x);
 			pos.y = RoundOff (pos.y);
 			pos.z = 0.0f;
