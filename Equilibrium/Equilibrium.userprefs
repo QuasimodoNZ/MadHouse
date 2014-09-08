@@ -1,11 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Cube.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Clock.cs">
     <Files>
-      <File FileName="Assets\Scripts\Cube.cs" Line="50" Column="16" />
-      <File FileName="Assets\Scripts\ResourceGeneration.cs" Line="16" Column="54" />
-      <File FileName="Assets\Scripts\Tags.cs" Line="28" Column="1" />
-      <File FileName="Assets\Scripts\Clock.cs" Line="17" Column="108" />
+      <File FileName="Assets\Scripts\Clock.cs" Line="82" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -46,6 +46,18 @@ public class Clock : MonoBehaviour {
 		Debug.LogWarning("do I work?");
 	}
 
+	public int addGold(int value){
+		return gold += value;
+	}
+	
+	public int addResources(int value){
+		return resource += value;
+	}
+	
+	public int addMaterial(int value){
+		return material += value;
+	}
+
 	public int getGold(){
 		return gold;
 	}
@@ -71,12 +83,9 @@ public class Clock : MonoBehaviour {
 	public void nextTurn(){
 		var collect = GameObject.FindGameObjectsWithTag (Tags.Built);
 		foreach (GameObject o in collect) {
-			var ticker = o.GetComponent<Cube>();
+			var ticker = o.GetComponent<BuildingTicker>();
 			if (ticker != null){
-				ticker.tick ();
-				gold++;
-				material++;
-				resource--;
+				ticker.tick (this);
 			}
 		}
 		if (resource < 1) {

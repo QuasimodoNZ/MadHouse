@@ -93,7 +93,4 @@ public class Cube : MonoBehaviour
 			blueprint.setParent (this.gameObject);
 		}
 	}
-	public void tick(){
-		gameObject.renderer.material.color = Color.white;
-	}
 }
