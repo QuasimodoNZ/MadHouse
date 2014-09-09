@@ -5,12 +5,6 @@
 	public class Cube : MonoBehaviour {
 	private GameObject origin; // used to return to original position in the bag.
 
-	public GameObject north;
-	public GameObject south;
-	public GameObject west;
-	public GameObject east;
-
-
 	public GameObject blueprintPrefab;
 	private Blueprint blueprint = null;
 	private BuildingState state;
@@ -46,6 +40,10 @@
 		return ((int)Math.Round (i / 1.0)) * 1;
 	}
 
+	public void setState(BuildingState newState){
+		state = newState;
+	}
+
 	private void releasedHandler (object sender, EventArgs e)
 	{
 		if (state == BuildingState.Menu) {
@@ -66,8 +64,8 @@
 			else {
 				gameObject.transform.parent = origin.transform.parent;
 				gameObject.transform.position = origin.transform.position;
-				Destroy (origin);
 			}
+			Destroy (origin);
 		}
 		if (state == BuildingState.Dragging) {
 			Vector3 pos = blueprint.transform.position;
