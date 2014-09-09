@@ -16,14 +16,18 @@ public class ResourceGeneration : MonoBehaviour {
 				if(rand.Next(0, 100) > 90){
 					count++;
 					GameObject resource = (GameObject) Resources.Load (generateDiffResources(i, j));
-					Vector3 temp = new Vector3((float)i, (float)j, 1);
+					Vector3 temp = new Vector3((int)i, (int)j, 1);
 					Instantiate(resource, temp, new Quaternion(0, 0, 0, 0));
 					resource.tag = Tags.Resource;
 				}
 			}
 		}
 	}
-
+	private  int RoundOff (float i)
+	{
+		return ((int)Math.Round (i / 1.0)) * 1;
+	}
+	
 	private string generateDiffResources(double x, double y){
 		int num = rand.Next (0, 100);
 		if(num < 12)
