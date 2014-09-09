@@ -181,8 +181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  north: {fileID: 100000, guid: b2d9d3570eabb074997bbb4fe5ffae5a, type: 2}
+  south: {fileID: 0}
+  west: {fileID: 0}
+  east: {fileID: 0}
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
-  state: 1
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
