@@ -4,6 +4,13 @@
 
 	public class Cube : MonoBehaviour {
 	private GameObject origin; // used to return to original position in the bag.
+
+	public GameObject north;
+	public GameObject south;
+	public GameObject west;
+	public GameObject east;
+
+
 	public GameObject blueprintPrefab;
 	private Blueprint blueprint = null;
 	private BuildingState state;
@@ -42,9 +49,25 @@
 	private void releasedHandler (object sender, EventArgs e)
 	{
 		if (state == BuildingState.Menu) {
-			gameObject.transform.parent = origin.transform.parent;
-			gameObject.transform.position = origin.transform.position;
-			Destroy (origin);
+			float x = gameObject.transform.position.x;
+			float y = gameObject.transform.position.y;
+			if (x > 12 && y < 6 && y > -6){
+				GameObject.Find ("PalletHandler/East").GetComponent<Pallet>().AddCube(gameObject);
+			}
+			else if (x < -12 && y < 6 && y > -6){
+				GameObject.Find ("PalletHandler/West").GetComponent<Pallet>().AddCube(gameObject);
+			}
+			else if (y > 6 && x < 8 && x > -8){
+				GameObject.Find ("PalletHandler/North").GetComponent<Pallet>().AddCube(gameObject);
+			}
+			else if (y < -6 && x < 8 && x > -8){
+				GameObject.Find ("PalletHandler/South").GetComponent<Pallet>().AddCube(gameObject);
+			}
+			else {
+				gameObject.transform.parent = origin.transform.parent;
+				gameObject.transform.position = origin.transform.position;
+				Destroy (origin);
+			}
 		}
 		if (state == BuildingState.Dragging) {
 			Vector3 pos = blueprint.transform.position;
