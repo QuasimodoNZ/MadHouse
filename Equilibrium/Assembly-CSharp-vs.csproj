@@ -66,10 +66,10 @@
      <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Example.cs" />
      <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Examples.cs" />
  <Reference Include="TouchScript">
- <HintPath>C:/Users/user/Desktop/MadHouse/Equilibrium/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
+ <HintPath>C:/Users/user/Documents/MadHouse/Equilibrium/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
  <Reference Include="TouchScript.Windows">
- <HintPath>C:/Users/user/Desktop/MadHouse/Equilibrium/Assets/TouchScript/Plugins/TouchScript.Windows.dll</HintPath>
+ <HintPath>C:/Users/user/Documents/MadHouse/Equilibrium/Assets/TouchScript/Plugins/TouchScript.Windows.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
