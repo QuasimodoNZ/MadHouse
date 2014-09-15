@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Water
+  m_Name: Mountian
   m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -25,8 +25,4 @@ Material:
       data:
         first:
           name: _Color
-<<<<<<< HEAD
-        second: {r: .349697202, g: .71366781, b: .970588207, a: 1}
-=======
-        second: {r: 0, g: 0, b: 1, a: 1}
->>>>>>> feature/TerrainParser
+        second: {r: .945098042, g: .945098042, b: .945098042, a: 1}

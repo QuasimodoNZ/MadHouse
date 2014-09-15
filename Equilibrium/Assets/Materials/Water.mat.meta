@@ -1,4 +1,8 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: e1d35ba252a01a44aab2389477e68e4d
+=======
+guid: 8ec3154b38aed9343a258a36ac37cafb
+>>>>>>> feature/TerrainParser
 NativeFormatImporter:
   userData: 

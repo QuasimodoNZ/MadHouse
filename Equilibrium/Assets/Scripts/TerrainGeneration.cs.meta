@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6bdfd4f6c00b7f744a4179886db7b6c9
+=======
+guid: 5e80b6a19a7a9e747b9588446e555d67
+>>>>>>> feature/TerrainParser
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
