@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\TapJS_Breaker.js" />
      <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\TapJS_Spawner.js" />
+     <None Include="Assets\Terrain\map.txt" />
  <Reference Include="TouchScript">
  <HintPath>C:/Users/Somfin/Documents/Equilibrium/Equilibrium/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
