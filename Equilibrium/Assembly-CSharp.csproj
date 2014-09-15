@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Clock.cs" />
      <Compile Include="Assets\Scripts\Cube.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
+     <Compile Include="Assets\Scripts\MenuBag.cs" />
      <Compile Include="Assets\Scripts\Pallet.cs" />
      <Compile Include="Assets\Scripts\ResourceGeneration.cs" />
      <Compile Include="Assets\Scripts\Tags.cs" />

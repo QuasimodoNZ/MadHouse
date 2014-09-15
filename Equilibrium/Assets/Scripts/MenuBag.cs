@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bag : MonoBehaviour {
+public class MenuBag : MonoBehaviour {
 	private int bagCount;
 
 	// Use this for initialization
