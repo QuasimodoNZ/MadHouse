@@ -127,7 +127,7 @@
 		state = BuildingState.Dragging;
 		tag = Tags.Placing;
 		
-		GameObject newBlueprint = (GameObject)GameObject.Instantiate (blueprintPrefab);
+		GameObject newBlueprint = (GameObject)GameObject.Instantiate (blueprintPrefab, gameObject.transform.position, gameObject.transform.rotation);
 		blueprint = newBlueprint.GetComponent<Blueprint> ();
 		blueprint.setParent (this.gameObject);
 		}
