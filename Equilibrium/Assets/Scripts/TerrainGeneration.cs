@@ -1,18 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-<<<<<<< HEAD
-
-public class TerrainGeneration : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-=======
 using System.IO; 
 public class TerrainGeneration : MonoBehaviour {
 
@@ -87,6 +74,5 @@ public class TerrainGeneration : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
->>>>>>> feature/TerrainParser
 	}
 }
