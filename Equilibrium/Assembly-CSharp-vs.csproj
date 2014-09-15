@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Pallet.cs" />
      <Compile Include="Assets\Scripts\ResourceGeneration.cs" />
      <Compile Include="Assets\Scripts\Tags.cs" />
+     <Compile Include="Assets\Scripts\TerrainGeneration.cs" />
      <Compile Include="Assets\TouchScript\Examples\General\2D - Double Tap\Scripts\DoubleTap_Sprite.cs" />
      <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Button.cs" />
      <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Panel.cs" />
@@ -67,6 +68,7 @@
      <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\Tap_Spawner.cs" />
      <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Example.cs" />
      <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Examples.cs" />
+     <None Include="Assets\Terrain\map.txt" />
  <Reference Include="TouchScript">
  <HintPath>C:/Users/Somfin/Documents/Equilibrium/Equilibrium/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
