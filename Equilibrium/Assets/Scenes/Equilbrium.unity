@@ -2066,7 +2066,7 @@ GUIText:
 
     Resources: 100
 
-    Materials: 3'
+    Materials: 5'
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 10, y: 300}
