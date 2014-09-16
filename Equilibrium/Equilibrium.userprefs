@@ -1,14 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Cube.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TerrainGeneration.cs">
     <Files>
-      <File FileName="Assets\Scripts\Cube.cs" Line="126" Column="19" />
-      <File FileName="Assets\Scripts\PopRemove.cs" Line="20" Column="3" />
-      <File FileName="Assets\Scripts\Popup.cs" Line="21" Column="21" />
+      <File FileName="Assets\Scripts\TerrainGeneration.cs" Line="66" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\TerrainGeneration.cs" line="13" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

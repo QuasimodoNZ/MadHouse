@@ -16,7 +16,7 @@ public class TerrainGeneration : MonoBehaviour {
 
 						for (int j = 0; j < c.Length; ++j) {
 							
-				placeTile((float)(j-15.5),(float)(i-8.5),c[j]);
+				placeTile((float)(j-16),(float)(i-9),c[j]);
 								}
 						}
 				}
@@ -59,17 +59,21 @@ public class TerrainGeneration : MonoBehaviour {
 		case 'S':
 			return "Fish";
 		case'C':
-				return"Coal";
+			return"Copper Ore";
 		case 'M':
 			return "Mountain";
 		case 'A':
 			return "Gold Ore";
+		case 'L' :
+			return "Coal";
 		
 
 				}
-		//throw new error("Could not fin the tiletype in the Map");
+
 		Debug.Log ("didnt find type for : " + type);
-		return "Trees";
+		throw new System.Exception("Could not find the tiletype in the Map");
+
+
 	}
 
 
