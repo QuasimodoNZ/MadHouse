@@ -14,13 +14,15 @@ public class Blueprint : MonoBehaviour
 		private  Color unobstructedColour = new Color (
 		0.0f, 1.0f, 0.0f, 0.5f);
 
+		public Material red;
+		public Material green;
 
 		private GameObject parent;
 		// Use this for initialization
 		void Start ()
 		{
 				//Starts off colliding with the cloned object
-				gameObject.renderer.material.color = collidingColour;		
+			gameObject.renderer.material = red;	
 
 		}
 	
@@ -37,14 +39,14 @@ public class Blueprint : MonoBehaviour
 		void OnTriggerEnter (Collider other)
 		{
 				if (other.gameObject.tag == Tags.Built) {
-						gameObject.renderer.material.color = collidingColour;		
+						gameObject.renderer.material =red;		
 						collidingObjects.Add (other.gameObject);
 				}
 		}
 		void OnTriggerStay (Collider other)
 		{
 				if (other.gameObject.tag == Tags.Built) {
-						gameObject.renderer.material.color = collidingColour;		
+						gameObject.renderer.material = red;		
 						if (!collidingObjects.Contains (other.gameObject))
 								collidingObjects.Add (other.gameObject);
 				}
@@ -54,7 +56,7 @@ public class Blueprint : MonoBehaviour
 		{
 				collidingObjects.Remove (other.gameObject);	
 				if (!isColliding ())
-						gameObject.renderer.material.color = unobstructedColour;
+						gameObject.renderer.material = green;
 		}
 
 		public bool isColliding ()
