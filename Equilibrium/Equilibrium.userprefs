@@ -1,10 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Cube.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Popup.cs">
     <Files>
-      <File FileName="Assets\Scripts\Cube.cs" Line="126" Column="19" />
-      <File FileName="Assets\Scripts\PopRemove.cs" Line="20" Column="3" />
-      <File FileName="Assets\Scripts\Popup.cs" Line="21" Column="21" />
+      <File FileName="Assets\Remove.cs" Line="15" Column="35" />
+      <File FileName="Assets\Improve.cs" Line="24" Column="28" />
+      <File FileName="Assets\Popup.cs" Line="14" Column="44" />
+      <File FileName="Assets\Scripts\Cube.cs" Line="116" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

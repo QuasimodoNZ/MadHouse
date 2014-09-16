@@ -8,6 +8,9 @@
 	public GameObject blueprintPrefab;
 	private Blueprint blueprint = null;
 	public BuildingState state;
+
+	public GameObject menuPrefab;
+	private GameObject menu;
 		
 	public void Start(){
 	}
@@ -100,18 +103,19 @@
 		var clock = controller.GetComponent<Clock> ();
 		if (clock == null) {
 			Debug.LogError ("Oh shit no clock!");
-		} else {
-			if (clock.getMaterial () < 1) {
-				gameObject.GetComponent<PanGesture> ().enabled = false;
-				return;
-			} else {
-				gameObject.GetComponent<PanGesture> ().enabled = true;
-				clock.spendMaterial (1);
-			}
 		}
 	if (state == BuildingState.Built) {
-		GameObject.Destroy (gameObject);
-		return;
+		if (menu == null){
+			GameObject obj = Instantiate (menuPrefab) as GameObject;
+			obj.transform.position = gameObject.transform.position;
+			obj.name = gameObject.name + "Menu";
+			obj.transform.parent = gameObject.transform;
+			obj.GetComponent<Popup>().setTarget(gameObject);
+			menu = obj;
+		} else {
+			Destroy (menu);
+			menu = null;
+		}
 	}
 	if (state == BuildingState.Pallet) {
 		var obj = Instantiate (gameObject) as GameObject;
