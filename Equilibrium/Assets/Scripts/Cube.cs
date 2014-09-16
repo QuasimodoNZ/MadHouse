@@ -7,10 +7,9 @@
 
 	public GameObject blueprintPrefab;
 	private Blueprint blueprint = null;
-	private BuildingState state;
+	public BuildingState state;
 		
 	public void Start(){
-		state = BuildingState.Menu;
 	}
 
 	public enum BuildingState
@@ -120,6 +119,7 @@
 		obj.GetComponent<Cube> ().enabled = true;
 		obj.GetComponent<TapGesture> ().enabled = true;
 		obj.transform.parent = gameObject.transform.parent;
+		obj.GetComponent<Cube>().setState (BuildingState.Pallet);
 		var pos = obj.transform.position;
 		pos.z = -3.0f;
 		gameObject.transform.position = pos;

@@ -2,11 +2,16 @@
 using System.Collections;
 
 public class MenuBag : MonoBehaviour {
+	public GameObject world;
 	private int bagCount;
 
 	// Use this for initialization
 	void Start () {
-	
+		foreach(GameObject obj in GameObject.FindGameObjectsWithTag(Tags.Draggable)){
+			Cube component = obj.GetComponent<Cube>();
+			if(component!=null)
+				component.setState(Cube.BuildingState.Menu);
+		}
 	}
 	
 	// Update is called once per frame
@@ -34,6 +39,9 @@ public class MenuBag : MonoBehaviour {
 					component.setState(Cube.BuildingState.Pallet);
 			}
 			//Build terrain object
+			GameObject start;
+			start = (GameObject) GameObject.Instantiate (world);
+			start.name = "Terrain";
 			Destroy (gameObject);
 		}
 	}

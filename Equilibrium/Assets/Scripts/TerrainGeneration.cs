@@ -34,7 +34,9 @@ public class TerrainGeneration : MonoBehaviour {
 		Debug.Log ("terrain: " +t);
 					GameObject resource = (GameObject) Resources.Load (t);
 					Vector3 temp = new Vector3(x, y, 2f);
-					Instantiate(resource, temp, new Quaternion(0, 0, 0, 0));
+					GameObject newtile = (GameObject) Instantiate(resource, temp, new Quaternion(0, 0, 0, 0));
+					newtile.name = t;
+					newtile.transform.parent = gameObject.transform;
 					//resource.tag = Tags.Resource;
 				}
 
