@@ -196,10 +196,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 85071985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0e6c542c00507840904887bbc1f30aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e80b6a19a7a9e747b9588446e555d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resource: {fileID: 100000, guid: 17cadf1c35b731843a6ac38aa18339ce, type: 2}
+  filename: ./Terrain/map.txt
 --- !u!1 &112255419
 GameObject:
   m_ObjectHideFlags: 1
@@ -302,7 +302,7 @@ GameObject:
   - 114: {fileID: 167776886}
   - 54: {fileID: 167776885}
   m_Layer: 0
-  m_Name: Blue Cube
+  m_Name: Lumber
   m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,8 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueprintPrefab: {fileID: 0}
-  state: 1
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
 --- !u!114 &167776888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,7 +948,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
-  state: 1
 --- !u!114 &501651561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,7 +1090,7 @@ GameObject:
   - 114: {fileID: 566545669}
   - 54: {fileID: 566545678}
   m_Layer: 0
-  m_Name: Blue Cube
+  m_Name: Lumber
   m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1146,8 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueprintPrefab: {fileID: 0}
-  state: 1
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
 --- !u!114 &566545671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1330,6 +1327,7 @@ GameObject:
   - 4: {fileID: 681349723}
   - 33: {fileID: 681349725}
   - 23: {fileID: 681349724}
+  - 114: {fileID: 681349726}
   m_Layer: 0
   m_Name: Pallet
   m_TagString: Interface
@@ -1345,7 +1343,7 @@ Transform:
   m_GameObject: {fileID: 681349722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -8.25, z: -1}
-  m_LocalScale: {x: 4, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 608180655}
   m_RootOrder: 0
@@ -1378,6 +1376,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1559776954}
   m_GameObject: {fileID: 681349722}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &681349726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: b2d9d3570eabb074997bbb4fe5ffae5a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1559776954}
+  m_GameObject: {fileID: 681349722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b2b7d7e44cc108408ebec802200ff6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
 --- !u!1 &777831520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,7 +1479,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
-  state: 1
 --- !u!114 &777831525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1685,7 +1695,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
-  state: 1
 --- !u!114 &881991459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2020,7 +2029,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
-  state: 1
 --- !u!114 &961507108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2224,7 +2232,7 @@ GameObject:
   - 114: {fileID: 1040525012}
   - 54: {fileID: 1040525011}
   m_Layer: 0
-  m_Name: Blue Cube
+  m_Name: Lumber
   m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2294,8 +2302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueprintPrefab: {fileID: 0}
-  state: 1
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
 --- !u!114 &1040525014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2609,7 +2616,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1205739809}
-  - 114: {fileID: 1205739810}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -2630,18 +2636,6 @@ Transform:
   - {fileID: 85071989}
   m_Father: {fileID: 0}
   m_RootOrder: 4
---- !u!114 &1205739810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1205739808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0e6c542c00507840904887bbc1f30aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resource: {fileID: 100000, guid: 17cadf1c35b731843a6ac38aa18339ce, type: 2}
 --- !u!1 &1287360084
 GameObject:
   m_ObjectHideFlags: 0
@@ -2661,7 +2655,7 @@ GameObject:
   - 114: {fileID: 1287360087}
   - 54: {fileID: 1287360086}
   m_Layer: 0
-  m_Name: Blue Cube
+  m_Name: Lumber
   m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2731,8 +2725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b08f51a244dadb486b57a366ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueprintPrefab: {fileID: 0}
-  state: 1
+  blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
 --- !u!114 &1287360089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3388,7 +3381,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
-  state: 1
 --- !u!114 &1664934330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3630,7 +3622,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
-  state: 1
 --- !u!114 &1753370947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3844,7 +3835,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
-  state: 1
 --- !u!114 &1755751040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4102,7 +4092,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
-  state: 1
 --- !u!114 &1816772248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4280,6 +4269,7 @@ GameObject:
   - 4: {fileID: 1932793096}
   - 33: {fileID: 1932793098}
   - 23: {fileID: 1932793097}
+  - 114: {fileID: 1932793099}
   m_Layer: 0
   m_Name: Pallet
   m_TagString: Interface
@@ -4295,7 +4285,7 @@ Transform:
   m_GameObject: {fileID: 1932793095}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
   m_LocalPosition: {x: 15.25, y: 0, z: -1}
-  m_LocalScale: {x: 4, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 870617774}
   m_RootOrder: 2
@@ -4328,6 +4318,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2106370564}
   m_GameObject: {fileID: 1932793095}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1932793099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: b2d9d3570eabb074997bbb4fe5ffae5a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2106370564}
+  m_GameObject: {fileID: 1932793095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b2b7d7e44cc108408ebec802200ff6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
 --- !u!1 &1955518177
 GameObject:
   m_ObjectHideFlags: 0
@@ -4415,6 +4418,7 @@ GameObject:
   - 4: {fileID: 2069046884}
   - 33: {fileID: 2069046886}
   - 23: {fileID: 2069046885}
+  - 114: {fileID: 2069046887}
   m_Layer: 0
   m_Name: Pallet
   m_TagString: Interface
@@ -4430,7 +4434,7 @@ Transform:
   m_GameObject: {fileID: 2069046883}
   m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
   m_LocalPosition: {x: -15.25, y: 0, z: -1}
-  m_LocalScale: {x: 4, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1386779880}
   m_RootOrder: 2
@@ -4463,6 +4467,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1088800960}
   m_GameObject: {fileID: 2069046883}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2069046887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: b2d9d3570eabb074997bbb4fe5ffae5a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1088800960}
+  m_GameObject: {fileID: 2069046883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b2b7d7e44cc108408ebec802200ff6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
 --- !u!1 &2072878229
 GameObject:
   m_ObjectHideFlags: 0
@@ -4595,6 +4612,7 @@ GameObject:
   - 4: {fileID: 2143962135}
   - 33: {fileID: 2143962134}
   - 23: {fileID: 2143962133}
+  - 114: {fileID: 2143962136}
   m_Layer: 0
   m_Name: Pallet
   m_TagString: Interface
@@ -4639,7 +4657,20 @@ Transform:
   m_GameObject: {fileID: 2143962132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 8.25, z: -1}
-  m_LocalScale: {x: 4, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1960067682}
   m_RootOrder: 0
+--- !u!114 &2143962136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: b2d9d3570eabb074997bbb4fe5ffae5a,
+    type: 2}
+  m_PrefabInternal: {fileID: 78722256}
+  m_GameObject: {fileID: 2143962132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b2b7d7e44cc108408ebec802200ff6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
