@@ -9,14 +9,20 @@ public class TerrainGeneration : MonoBehaviour {
 	public string filename;
 	// Use this for initialization
 	void Start () {
-			
-				string[] lines = File.ReadAllLines (Application.dataPath + "/" + filename);
+		TextAsset mytext = Resources.Load ("GameMap") as TextAsset;
+		string load = mytext.text;
+		Debug.Log (load);
+		string[] lines = load.Split ("\n"[0]);
+		Debug.Log (lines.GetLength (0));
 				for (int i = 0; i < lines.Length; ++i) {
 						char[] c = lines[i].ToCharArray ();
 
 						for (int j = 0; j < c.Length; ++j) {
-							
+							if (c[j] == '\r'){
+								Debug.Log("Caught it!");
+				} else {
 							placeTile((float)(j-16f),(float)(i-9f),c[j]);
+				}
 								}
 						}
 				}
@@ -65,8 +71,12 @@ public class TerrainGeneration : MonoBehaviour {
 			return "Gold Ore";
 		case 'L' :
 			return "Coal";
-		
-
+		case '\n' :
+			Debug.Log ("Got a newline!");
+				break;
+		case '\r' :
+			Debug.Log ("Got a return!");
+				break;
 				}
 
 		Debug.Log ("didnt find type for : " + type);

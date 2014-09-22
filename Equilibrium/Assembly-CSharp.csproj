@@ -71,7 +71,7 @@
      <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\Tap_Spawner.cs" />
      <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Example.cs" />
      <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Examples.cs" />
-     <None Include="Assets\Terrain\map.txt" />
+     <None Include="Assets\Resources\GameMap.txt" />
  <Reference Include="TouchScript">
  <HintPath>C:/Users/Somfin/Documents/Equilibrium/Equilibrium/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>

@@ -2026,9 +2026,9 @@ GUIText:
   m_GameObject: {fileID: 1378974315}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Gold: 1
+  m_Text: 'Gold: 0
 
-    Resources: 99
+    Resources: 100
 
     Materials: 5'
   m_Anchor: 0
