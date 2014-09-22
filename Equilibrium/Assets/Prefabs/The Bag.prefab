@@ -804,7 +804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ed73769d2872c44b7c9a7f12e93acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  world: {fileID: 0}
+  world: {fileID: 100002, guid: e76f4d614ae8bb5499f62877f6940f23, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -840,6 +840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  state: 0
+  menuPrefab: {fileID: 100004, guid: 31992296ec8ef7f4194bdbd6e46f196d, type: 2}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -954,6 +956,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  state: 0
+  menuPrefab: {fileID: 100004, guid: 31992296ec8ef7f4194bdbd6e46f196d, type: 2}
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1068,6 +1072,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  state: 0
+  menuPrefab: {fileID: 100004, guid: 31992296ec8ef7f4194bdbd6e46f196d, type: 2}
 --- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1182,6 +1188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  state: 0
+  menuPrefab: {fileID: 100004, guid: 31992296ec8ef7f4194bdbd6e46f196d, type: 2}
 --- !u!114 &11400042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1296,6 +1304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  state: 0
+  menuPrefab: {fileID: 100004, guid: 31992296ec8ef7f4194bdbd6e46f196d, type: 2}
 --- !u!114 &11400054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1410,6 +1420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  state: 0
+  menuPrefab: {fileID: 100004, guid: 31992296ec8ef7f4194bdbd6e46f196d, type: 2}
 --- !u!114 &11400066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1524,6 +1536,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  state: 0
+  menuPrefab: {fileID: 100004, guid: 31992296ec8ef7f4194bdbd6e46f196d, type: 2}
 --- !u!114 &11400078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1638,6 +1652,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueprintPrefab: {fileID: 100000, guid: 42a0ec5186b6f48198348d7f8a8c8aad, type: 2}
+  state: 0
+  menuPrefab: {fileID: 100004, guid: 31992296ec8ef7f4194bdbd6e46f196d, type: 2}
 --- !u!114 &11400090
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -16,7 +16,7 @@ public class TerrainGeneration : MonoBehaviour {
 
 						for (int j = 0; j < c.Length; ++j) {
 							
-				placeTile((float)(j-16),(float)(i-9),c[j]);
+							placeTile((float)(j-16f),(float)(i-9f),c[j]);
 								}
 						}
 				}
@@ -31,12 +31,11 @@ public class TerrainGeneration : MonoBehaviour {
 
 	 void placeTile(float x,float y,char type) {
 					string t = getTerrainName (type);
-		Debug.Log ("terrain: " +t);
-					GameObject resource = (GameObject) Resources.Load (t);
+					Debug.Log ("terrain: " +t);
 					Vector3 temp = new Vector3(x, y, 2f);
-					GameObject newtile = (GameObject) Instantiate(resource, temp, new Quaternion(0, 0, 0, 0));
-					newtile.name = t;
-					newtile.transform.parent = gameObject.transform;
+					GameObject resource = (GameObject) Instantiate ((Resources.Load (t)), temp, new Quaternion(0, 0, 0, 0));
+					resource.name = t;
+					resource.transform.parent = gameObject.transform;
 					//resource.tag = Tags.Resource;
 				}
 
