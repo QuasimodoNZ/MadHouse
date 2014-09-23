@@ -26,7 +26,6 @@ public class Pallet : MonoBehaviour {
 		} else {
 			cubes.Add (c);
 			int listlength = cubes.Count;
-			Debug.Log(listlength);
 			c.transform.position = gameObject.transform.position;
 			if (horizontal == true){
 				for (int i = 0; i < listlength; i++){

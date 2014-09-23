@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 
 using System.Collections;
@@ -38,13 +38,15 @@ public class Blueprint : MonoBehaviour
 
 		void OnTriggerEnter (Collider other)
 		{
-				if (other.gameObject.tag == Tags.Built) {
+		Debug.Log ("OnTriggerEnter " + other);
+				if (other.gameObject.tag == Tags.Built) { 
 						gameObject.renderer.material =red;		
 						collidingObjects.Add (other.gameObject);
 				}
 		}
 		void OnTriggerStay (Collider other)
 		{
+		Debug.Log ("OnTriggerStay " + other);
 				if (other.gameObject.tag == Tags.Built) {
 						gameObject.renderer.material = red;		
 						if (!collidingObjects.Contains (other.gameObject))
@@ -54,6 +56,7 @@ public class Blueprint : MonoBehaviour
 
 		void OnTriggerExit (Collider other)
 		{
+		Debug.Log ("OnTriggerExit " + other);
 				collidingObjects.Remove (other.gameObject);	
 				if (!isColliding ())
 						gameObject.renderer.material = green;
@@ -61,7 +64,18 @@ public class Blueprint : MonoBehaviour
 
 		public bool isColliding ()
 		{
-				return collidingObjects.Count > 0;
+				bool colliding = false;
+
+				foreach (var other in collidingObjects) {
+					GameObject check = (GameObject)other;
+					if (check.gameObject == null) continue;
+					if(!parent.GetComponent<BuildingTicker>().canCollideWith(check.gameObject)){
+						colliding = true;
+						break;
+					}
+				}
+
+				return colliding;
 		}
 
 		public void setParent (GameObject go)

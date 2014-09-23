@@ -37,7 +37,6 @@ public class TerrainGeneration : MonoBehaviour {
 
 	 void placeTile(float x,float y,char type) {
 					string t = getTerrainName (type);
-					Debug.Log ("terrain: " +t);
 					Vector3 temp = new Vector3(x, y, 2f);
 					GameObject resource = (GameObject) Instantiate ((Resources.Load (t)), temp, new Quaternion(0, 0, 0, 0));
 					resource.name = t;
