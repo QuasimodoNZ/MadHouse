@@ -53,15 +53,19 @@
 			float y = gameObject.transform.position.y;
 			if (x > 12 && y < 6 && y > -6){
 				GameObject.Find ("PalletHandler/East").GetComponent<Pallet>().AddCube(gameObject);
+				GameObject.Find ("PalletHandler/EastText").GetComponent<HUD>().isValid = true;
 			}
 			else if (x < -12 && y < 6 && y > -6){
 				GameObject.Find ("PalletHandler/West").GetComponent<Pallet>().AddCube(gameObject);
+				GameObject.Find ("PalletHandler/WestText").GetComponent<HUD>().isValid = true;
 			}
 			else if (y > 6 && x < 8 && x > -8){
 				GameObject.Find ("PalletHandler/North").GetComponent<Pallet>().AddCube(gameObject);
+				GameObject.Find ("PalletHandler/NorthText").GetComponent<HUD>().isValid = true;
 			}
 			else if (y < -6 && x < 8 && x > -8){
 				GameObject.Find ("PalletHandler/South").GetComponent<Pallet>().AddCube(gameObject);
+				GameObject.Find ("PalletHandler/SouthText").GetComponent<HUD>().isValid = true;
 			}
 			else {
 				gameObject.transform.parent = origin.transform.parent;

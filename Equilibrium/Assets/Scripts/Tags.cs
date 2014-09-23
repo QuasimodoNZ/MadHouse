@@ -24,4 +24,6 @@ public class Tags : MonoBehaviour {
 	public const string Resource = "Resource";
 	
 	public const string UtilisedResource = "UtilisedResource";
+
+	public const string HUD = "HUD";
 }

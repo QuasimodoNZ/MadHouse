@@ -50,10 +50,10 @@
      <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\TapJS_Spawner.js" />
      <None Include="Assets\Resources\GameMap.txt" />
  <Reference Include="TouchScript">
- <HintPath>C:/Users/Somfin/Documents/Equilibrium/Equilibrium/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
+ <HintPath>C:/Users/Peter/Documents/MadHouse/Equilibrium/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
  <Reference Include="TouchScript.Windows">
- <HintPath>C:/Users/Somfin/Documents/Equilibrium/Equilibrium/Assets/TouchScript/Plugins/TouchScript.Windows.dll</HintPath>
+ <HintPath>C:/Users/Peter/Documents/MadHouse/Equilibrium/Assets/TouchScript/Plugins/TouchScript.Windows.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
