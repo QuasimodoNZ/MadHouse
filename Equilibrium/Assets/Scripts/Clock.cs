@@ -8,13 +8,15 @@ public class Clock : MonoBehaviour {
 	private int resource;
 	private int material;
 	private int gold;
-	public GUIText text;
+	//public GUIText text;
+
 	// Use this for initialization
 	void Start () {
 		resource = 100;
 		material = 5;
 		gold = 0;
-		text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+		updateResourceHUDs ();
 	}
 	
 	// Update is called once per frame
@@ -38,7 +40,8 @@ public class Clock : MonoBehaviour {
 	{
 		Debug.LogWarning ("Taking turn!");
 		nextTurn ();
-		text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+		updateResourceHUDs ();
 	}
 
 	private void pressedHandler (object sender, EventArgs e)
@@ -60,12 +63,23 @@ public class Clock : MonoBehaviour {
 
 	public void spendMaterial(int amount){
 		material = material - amount;
-		text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+		updateResourceHUDs ();
 	}
 
 	public void ruinEnvironment (int amount){
 		resource = resource - amount;
-		text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+		updateResourceHUDs ();
+	}
+
+	public void updateResourceHUDs()
+	{
+		foreach(GameObject obj in GameObject.FindGameObjectsWithTag(Tags.HUD))
+		{
+			HUD component = obj.GetComponent<HUD>();
+			component.updateResourceHUDs(gold, resource, material);
+		}
 	}
 
 	public void nextTurn(){

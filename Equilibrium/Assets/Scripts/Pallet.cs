@@ -54,6 +54,12 @@ public class Pallet : MonoBehaviour {
 		if (cubes.Count != 0)
 						return false;
 		Destroy (gameObject);
+
+		var huds = GameObject.FindGameObjectsWithTag (Tags.HUD);
+		foreach (GameObject o in huds) {
+			if(o.GetComponent<HUD>().isValid == false)
+				Destroy(o);
+		}
 		return true;
 	}
 }
