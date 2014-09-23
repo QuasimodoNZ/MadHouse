@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BuildingTicker : MonoBehaviour
+public abstract class BuildingTicker : MonoBehaviour
 {		
 	abstract public void tick (Clock c);
+
+	public abstract bool canCollideWith (GameObject other);
+
 }

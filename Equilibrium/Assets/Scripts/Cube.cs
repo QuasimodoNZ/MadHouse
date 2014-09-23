@@ -73,6 +73,7 @@
 			Vector3 pos = blueprint.transform.position;
 
 			if (blueprint.isColliding()){
+				Debug.Log ("blueprint.iscolliding = true");
 				Destroy (gameObject);
 				Destroy (blueprint.gameObject);
 				return;

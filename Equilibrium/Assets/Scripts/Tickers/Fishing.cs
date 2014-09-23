@@ -5,10 +5,17 @@ public class Fishing : BuildingTicker
 {
 		private int upkeep, enviormentDamage, foodConsumed;
 	
-		public void tick (Clock c)
+	public override void tick (Clock c)
 		{
 				c.eatFood (upkeep);
 				c.spendGold (enviormentDamage);
 				c.ruinEnvironment (enviormentDamage);
+	}	
+
+	public override bool canCollideWith (GameObject other){
+
+			if (other.tag.Equals (Tags.Built))
+				return false;
+		return true;
 		}
 }
