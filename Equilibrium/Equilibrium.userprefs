@@ -1,30 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Blueprint.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tickers\Factory.cs">
     <Files>
-      <File FileName="Equilibrium.sln" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MenuBag.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Blueprint.cs" Line="38" Column="2" />
-      <File FileName="Assets\Scripts\Tickers\BuildingTicker.cs" Line="11" Column="1" />
-      <File FileName="Assets\Scripts\Tickers\City.cs" Line="7" Column="2" />
-      <File FileName="c:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\Tickers\Factory.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\Tickers\Farm.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\Tickers\Fishing.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\Tickers\Lumber.cs" Line="11" Column="36" />
-      <File FileName="c:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\Tickers\Mine.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\Tickers\Power.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\Tickers\School.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Cube.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tickers\City.cs" Line="6" Column="40" />
+      <File FileName="Assets\Scripts\Tickers\Lumber.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tickers\School.cs" Line="28" Column="1" />
+      <File FileName="Assets\Scripts\Tickers\Power.cs" Line="14" Column="57" />
+      <File FileName="Assets\Scripts\Tickers\Mine.cs" Line="26" Column="1" />
+      <File FileName="Assets\Scripts\Tickers\Fishing.cs" Line="27" Column="1" />
+      <File FileName="Assets\Scripts\Tickers\Farm.cs" Line="21" Column="19" />
+      <File FileName="Assets\Scripts\Tickers\Factory.cs" Line="20" Column="51" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="C:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\Blueprint.cs" line="157" />
-      <Breakpoint file="c:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\Tickers\Lumber.cs" line="41" />
-      <Breakpoint file="c:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\Tickers\Lumber.cs" line="16" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="c:\Users\user\Documents\UNI\SWEN302\project\Equilibrium\Assets\Scripts\Tickers\Lumber.cs" line="19" offsetX="325" offsetY="306" expression="other.name" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

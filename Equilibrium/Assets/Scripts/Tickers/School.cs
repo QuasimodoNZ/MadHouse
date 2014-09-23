@@ -17,6 +17,11 @@ public class School : BuildingTicker
 		
 		if (other.tag.Equals (Tags.Built))
 			return false;
-		return true;
+		
+		
+		if (other.name != "Trees" && other.name != "Mountain" && other.name != "Water" && other.name != "Fish")
+			return true;
+
+		return false;
 	}
 }

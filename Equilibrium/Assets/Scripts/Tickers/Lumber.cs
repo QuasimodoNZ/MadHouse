@@ -13,7 +13,7 @@ public class Lumber : BuildingTicker
 	}
 	public override bool canCollideWith (GameObject other){
 
-	   if (other.tag.Equals (Tags.Built))
+	    if (other.tag.Equals (Tags.Built))
 			return false;
 
 

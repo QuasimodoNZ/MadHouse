@@ -13,9 +13,14 @@ public class Farm : BuildingTicker
 				c.ruinEnvironment (enviormentDamage);
 		}
 	public override bool canCollideWith (GameObject other){
-
-			if (other.tag.Equals (Tags.Built))
-				return false;
-		return true;
+		
+		if (other.tag.Equals (Tags.Built))
+			return false;
+		
+		
+		if (other.name == "Farmland")
+			return true;
+		
+		return false;
 		}
 }

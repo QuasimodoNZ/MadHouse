@@ -23,6 +23,7 @@ public class Blueprint : MonoBehaviour
 		{
 				//Starts off colliding with the cloned object
 			gameObject.renderer.material = red;	
+			Update ();
 
 		}
 	
@@ -38,38 +39,38 @@ public class Blueprint : MonoBehaviour
 
 		void OnTriggerEnter (Collider other)
 		{
-		Debug.Log ("OnTriggerEnter " + other);
-				if (other.gameObject.tag == Tags.Built) { 
-						gameObject.renderer.material =red;		
-						collidingObjects.Add (other.gameObject);
-				}
+			collidingObjects.Add (other.gameObject);
+			if (isColliding ()) {
+				gameObject.renderer.material = red;
+			}
+			Debug.Log (collidingObjects.Count);
 		}
+
 		void OnTriggerStay (Collider other)
 		{
-		Debug.Log ("OnTriggerStay " + other);
-				if (other.gameObject.tag == Tags.Built) {
-						gameObject.renderer.material = red;		
-						if (!collidingObjects.Contains (other.gameObject))
-								collidingObjects.Add (other.gameObject);
-				}
+			if (!collidingObjects.Contains (other.gameObject)){
+				collidingObjects.Add (other.gameObject);
+			}
+			if (isColliding ()) {
+				gameObject.renderer.material = red;
+			}
 		}
 
 		void OnTriggerExit (Collider other)
 		{
-		Debug.Log ("OnTriggerExit " + other);
 				collidingObjects.Remove (other.gameObject);	
-				if (!isColliding ())
+				if (!isColliding ()) {
 						gameObject.renderer.material = green;
+				}
+			Debug.Log (collidingObjects.Count);
 		}
 
 		public bool isColliding ()
 		{
 				bool colliding = false;
-
 				foreach (var other in collidingObjects) {
 					GameObject check = (GameObject)other;
-					if (check.gameObject == null) continue;
-					if(!parent.GetComponent<BuildingTicker>().canCollideWith(check.gameObject)){
+					if(!parent.GetComponent<BuildingTicker>().canCollideWith(check.gameObject) && parent != check.gameObject){
 						colliding = true;
 						break;
 					}

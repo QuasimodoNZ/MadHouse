@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Blueprint.cs" />
      <Compile Include="Assets\Scripts\Clock.cs" />
+     <Compile Include="Assets\Scripts\CollisionUnions.cs" />
      <Compile Include="Assets\Scripts\Cube.cs" />
      <Compile Include="Assets\Scripts\HUD.cs" />
      <Compile Include="Assets\Scripts\Improve.cs" />
@@ -83,10 +84,10 @@
      <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Examples.cs" />
      <None Include="Assets\Resources\GameMap.txt" />
  <Reference Include="TouchScript">
- <HintPath>C:/Users/Peter/Documents/MadHouse/Equilibrium/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
+ <HintPath>C:/Users/Somfin/Documents/Equilibrium/Equilibrium/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
  <Reference Include="TouchScript.Windows">
- <HintPath>C:/Users/Peter/Documents/MadHouse/Equilibrium/Assets/TouchScript/Plugins/TouchScript.Windows.dll</HintPath>
+ <HintPath>C:/Users/Somfin/Documents/Equilibrium/Equilibrium/Assets/TouchScript/Plugins/TouchScript.Windows.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

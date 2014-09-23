@@ -12,9 +12,14 @@ public class Mine :BuildingTicker
 				c.ruinEnvironment (enviormentDamage);
 	}
 	public override bool canCollideWith (GameObject other){
-
-			if (other.tag.Equals (Tags.Built))
-				return false;
-		return true;
+		
+		if (other.tag.Equals (Tags.Built))
+			return false;
+		
+		
+		if (other.name == "Mountain" || other.name == "Iron Ore" || other.name == "Copper Ore" || other.name == "Gold Ore" || other.name == "Coal")
+			return true;
+		
+		return false;
 		}
 }

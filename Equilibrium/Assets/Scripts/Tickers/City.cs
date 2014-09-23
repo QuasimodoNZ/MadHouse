@@ -13,11 +13,14 @@ public class City : BuildingTicker
 		}
 
 	public override bool canCollideWith (GameObject other){
-
-			if (other.tag.Equals (Tags.Built))
-				return false;
-
-		return true;
-
+		
+		if (other.tag.Equals (Tags.Built))
+			return false;
+		
+		
+		if (other.name != "Trees" && other.name != "Mountain" && other.name != "Water" && other.name != "Fish")
+			return true;
+		
+		return false;
 	}
 }
