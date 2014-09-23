@@ -59,6 +59,15 @@
      <Compile Include="Assets\Scripts\ResourceGeneration.cs" />
      <Compile Include="Assets\Scripts\Tags.cs" />
      <Compile Include="Assets\Scripts\TerrainGeneration.cs" />
+     <Compile Include="Assets\Scripts\Tickers\BuildingTicker.cs" />
+     <Compile Include="Assets\Scripts\Tickers\City.cs" />
+     <Compile Include="Assets\Scripts\Tickers\Factory.cs" />
+     <Compile Include="Assets\Scripts\Tickers\Farm.cs" />
+     <Compile Include="Assets\Scripts\Tickers\Fishing.cs" />
+     <Compile Include="Assets\Scripts\Tickers\Lumber.cs" />
+     <Compile Include="Assets\Scripts\Tickers\Mine.cs" />
+     <Compile Include="Assets\Scripts\Tickers\Power.cs" />
+     <Compile Include="Assets\Scripts\Tickers\School.cs" />
      <Compile Include="Assets\TouchScript\Examples\General\2D - Double Tap\Scripts\DoubleTap_Sprite.cs" />
      <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Button.cs" />
      <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Panel.cs" />
