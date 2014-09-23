@@ -6,10 +6,10 @@ using System;
 public class Clock : MonoBehaviour
 {
 
-<<<<<<< HEAD
 	private int resource;
 	private int material;
 	private int gold;
+	private int food;
 	//public GUIText text;
 
 	// Use this for initialization
@@ -20,22 +20,6 @@ public class Clock : MonoBehaviour
 		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
 	}
-=======
-		private int resource;
-		private int material;
-		private int gold;
-		private int food;
-		public GUIText text;
-		// Use this for initialization
-		void Start ()
-		{
-				resource = 100;
-				material = 5;
-				gold = 0;
-				food = 1000;
-				text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
-		}
->>>>>>> 7f8e96fb628815329004d2cb717f4ca2def36fd8
 	
 		// Update is called once per frame
 		void Update ()
@@ -55,7 +39,6 @@ public class Clock : MonoBehaviour
 				GetComponent<ReleaseGesture> ().Released -= releasedHandler;
 		}
 
-<<<<<<< HEAD
 	private void releasedHandler (object sender, EventArgs e)
 	{
 		Debug.LogWarning ("Taking turn!");
@@ -63,14 +46,6 @@ public class Clock : MonoBehaviour
 		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
 	}
-=======
-		private void releasedHandler (object sender, EventArgs e)
-		{
-				Debug.LogWarning ("Taking turn!");
-				nextTurn ();
-				text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
-		}
->>>>>>> 7f8e96fb628815329004d2cb717f4ca2def36fd8
 
 		private void pressedHandler (object sender, EventArgs e)
 		{
@@ -96,9 +71,14 @@ public class Clock : MonoBehaviour
 				return food;
 		}
 
-<<<<<<< HEAD
 	public void spendMaterial(int amount){
 		material = material - amount;
+		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+		updateResourceHUDs ();
+	}
+
+	public void spendGold(int amount){
+		gold -= amount;
 		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
 	}
@@ -117,30 +97,12 @@ public class Clock : MonoBehaviour
 			component.updateResourceHUDs(gold, resource, material);
 		}
 	}
-=======
-		public void spendGold (int amount)
-		{
-				gold -= amount;
-				text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
-		}
-
-		public void spendMaterial (int amount)
-		{
-				material -= amount;
-				text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
-		}
->>>>>>> 7f8e96fb628815329004d2cb717f4ca2def36fd8
-
-		public void ruinEnvironment (int amount)
-		{
-				resource -= amount;
-				text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
-		}
 
 		public void eatFood (int amount)
 		{
 				food -= amount;
-				text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+				updateResourceHUDs ();		
+		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		}
 
 		public void nextTurn ()
