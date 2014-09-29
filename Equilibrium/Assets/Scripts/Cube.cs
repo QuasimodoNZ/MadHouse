@@ -136,6 +136,35 @@
 		state = BuildingState.Dragging;
 		tag = Tags.Placing;
 		
+
+		clock.spendMaterial(10);
+		switch(obj.name){
+		case "City":
+			clock.spendMaterial(20);
+			break;
+		case "Factory":
+			clock.spendMaterial(15);
+			break;
+		case "Farm":
+			clock.spendMaterial(8);
+			break;
+		case "Fishing":
+			clock.spendMaterial(5);
+			break;
+		case "Lumber":
+			clock.spendMaterial(10);
+			break;
+		case "Mine":
+			clock.spendMaterial(10);
+			break;
+		case "Power":
+			clock.spendMaterial(12);
+			break;
+		case "School":
+			clock.spendMaterial(10);
+			break;
+		}
+
 		GameObject newBlueprint = (GameObject)GameObject.Instantiate (blueprintPrefab, gameObject.transform.position, gameObject.transform.rotation);
 		blueprint = newBlueprint.GetComponent<Blueprint> ();
 		blueprint.setParent (this.gameObject);
