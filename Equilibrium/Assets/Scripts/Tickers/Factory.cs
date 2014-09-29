@@ -6,13 +6,14 @@ public class Factory : BuildingTicker
 		private int enviroDamage = 25;
 		private int materialsBuild = 15;
 		private int gold = 30;
-		private int bonus = .1;	//increases generation of materials of all buildings by 10%
+		private double bonus = .1;	//increases generation of materials of all buildings by 10%
 	
 		public override void tick (Clock c)
 		{
-				c.eatFood (upkeep);
-				c.spendGold (enviormentDamage);
-				c.ruinEnvironment (enviormentDamage);
+				//c.eatFood (upkeep);
+				//c.spendGold (enviormentDamage);
+				c.ruinEnvironment (enviroDamage);
+				c.generateGold (gold);
 		}
 	public override bool canCollideWith (GameObject other){
 		

@@ -9,9 +9,10 @@ public class City : BuildingTicker
 
 		public override void tick (Clock c)
 		{
-			c.eatFood (upkeep);
-			c.spendGold (enviormentDamage);
-			c.ruinEnvironment (enviormentDamage);
+			//c.eatFood (upkeep);
+			//c.spendGold (enviormentDamage);
+			c.ruinEnvironment (enviroDamage);
+			c.generateGold (goldPerTurn);
 		}
 
 	public override bool canCollideWith (GameObject other){

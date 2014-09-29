@@ -10,9 +10,11 @@ public class Fishing : BuildingTicker
 	
 	public override void tick (Clock c)
 		{
-				c.eatFood (upkeep);
-				c.spendGold (enviormentDamage);
-				c.ruinEnvironment (enviormentDamage);
+				//c.eatFood (upkeep);
+				//c.spendGold (enviormentDamage);
+				c.ruinEnvironment (enviroDamage);
+				c.generateGold (gold);
+				c.generateFood (foodGenerated);
 	}	
 
 	public override bool canCollideWith (GameObject other){

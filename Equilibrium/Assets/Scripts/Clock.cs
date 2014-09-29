@@ -89,6 +89,21 @@ public class Clock : MonoBehaviour
 		updateResourceHUDs ();
 	}
 
+	public void generateMaterials(int amount){
+		material = material + amount;
+		updateResourceHUDs ();
+		}
+
+	public void generateGold(int amount){
+		gold = gold + amount;
+		updateResourceHUDs ();
+		}
+
+	public void generateFood(int amount){
+		food = food + amount;
+		updateResourceHUDs ();
+		}
+
 	public void updateResourceHUDs()
 	{
 		foreach(GameObject obj in GameObject.FindGameObjectsWithTag(Tags.HUD))
