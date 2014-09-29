@@ -10,6 +10,7 @@ public class Clock : MonoBehaviour
 	private int material;
 	private int gold;
 	private int food;
+
 	//public GUIText text;
 
 	// Use this for initialization
@@ -109,7 +110,7 @@ public class Clock : MonoBehaviour
 		foreach(GameObject obj in GameObject.FindGameObjectsWithTag(Tags.HUD))
 		{
 			HUD component = obj.GetComponent<HUD>();
-			component.updateResourceHUDs(gold, resource, material);
+			component.updateResourceHUDs(gold, resource, material,food);
 		}
 	}
 
