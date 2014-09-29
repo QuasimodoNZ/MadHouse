@@ -3,7 +3,10 @@ using System.Collections;
 
 public class Factory : BuildingTicker
 {
-		private int upkeep, enviormentDamage, foodConsumed;
+		private int enviroDamage = 25;
+		private int materialsBuild = 15;
+		private int gold = 30;
+		private int bonus = .1;	//increases generation of materials of all buildings by 10%
 	
 		public override void tick (Clock c)
 		{

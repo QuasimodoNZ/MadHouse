@@ -3,7 +3,10 @@ using System.Collections;
 
 public class Mine :BuildingTicker
 {
-		private int upkeep, enviormentDamage, foodConsumed;
+		private int enviroDamage = 10;
+		private int gold = 25;
+		private int materialsBuild = 8;
+		private int materialsGenerated = 19;
 	
 	public override void tick (Clock c)
 		{

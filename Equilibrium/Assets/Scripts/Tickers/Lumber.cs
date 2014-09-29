@@ -3,7 +3,10 @@ using System.Collections;
 
 public class Lumber : BuildingTicker
 {
-		private int upkeep, enviormentDamage, foodConsumed;
+	private int enviroDamage = 5;
+	private int gold = 7;
+	private int materialsBuild = 10;
+	private int materialsGenerated = 6;
 	
 	public override void tick (Clock c)
 		{
