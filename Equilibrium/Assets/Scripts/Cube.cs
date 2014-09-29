@@ -136,8 +136,6 @@
 		state = BuildingState.Dragging;
 		tag = Tags.Placing;
 		
-
-		clock.spendMaterial(10);
 		switch(obj.name){
 		case "City":
 			clock.spendMaterial(20);

@@ -6,7 +6,7 @@ using System;
 public class Clock : MonoBehaviour
 {
 
-	private int resource;
+	private int environment;
 	private int material;
 	private int gold;
 	private int food;
@@ -15,7 +15,7 @@ public class Clock : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
-		resource = 100;
+		environment = 1000;
 		material = 5;
 		gold = 0;
 		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
@@ -60,7 +60,7 @@ public class Clock : MonoBehaviour
 
 		public int getResources ()
 		{
-				return resource;
+				return environment;
 		}
 
 		public int getMaterial ()
@@ -85,7 +85,7 @@ public class Clock : MonoBehaviour
 	}
 
 	public void ruinEnvironment (int amount){
-		resource = resource - amount;
+		environment = environment - amount;
 		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
 	}
@@ -110,7 +110,7 @@ public class Clock : MonoBehaviour
 		foreach(GameObject obj in GameObject.FindGameObjectsWithTag(Tags.HUD))
 		{
 			HUD component = obj.GetComponent<HUD>();
-			component.updateResourceHUDs(gold, resource, material,food);
+			component.updateResourceHUDs(gold, environment, material,food);
 		}
 	}
 
@@ -129,7 +129,7 @@ public class Clock : MonoBehaviour
 						if (ticker != null)
 								ticker.tick (this);
 				}
-				if (resource < 1) {
+				if (environment < 1) {
 						var down = GameObject.FindGameObjectsWithTag (Tags.Draggable);
 						foreach (GameObject o in down) {
 								o.renderer.material.color = Color.black;

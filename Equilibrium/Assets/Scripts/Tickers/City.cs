@@ -4,7 +4,6 @@ using System.Collections;
 public class City : BuildingTicker
 {
 		private int enviroDamage = 20;
-		private int buildMaterials = 20;
 		private int goldPerTurn = 40;
 
 		public override void tick (Clock c)
