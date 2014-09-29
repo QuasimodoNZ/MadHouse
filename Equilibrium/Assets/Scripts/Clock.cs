@@ -20,6 +20,7 @@ public class Clock : MonoBehaviour
 		gold = 0;
 		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
+		updateVisualDamage ();
 	}
 	
 		// Update is called once per frame
@@ -143,4 +144,8 @@ public class Clock : MonoBehaviour
 						OnDisable ();
 				}
 		}
+
+	public void updateVisualDamage(){
+
+	}
 }
