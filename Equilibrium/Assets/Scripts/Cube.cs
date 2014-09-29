@@ -75,9 +75,70 @@
 		}
 		if (state == BuildingState.Dragging) {
 			Vector3 pos = blueprint.transform.position;
-
+			var controller = GameObject.FindGameObjectWithTag (Tags.GameController);
+			var clock = controller.GetComponent<Clock> ();
 			if (blueprint.isColliding()){
 				Debug.Log ("blueprint.iscolliding = true");
+
+				switch(gameObject.name){
+				case "City":
+					clock.spendMaterial(-20);
+					break;
+				case "Factory":
+					clock.spendMaterial(-15);
+					break;
+				case "Farm":
+					clock.spendMaterial(-8);
+					break;
+				case "Fishing":
+					clock.spendMaterial(-5);
+					break;
+				case "Lumber":
+					clock.spendMaterial(-10);
+					break;
+				case "Mine":
+					clock.spendMaterial(-10);
+					break;
+				case "Power":
+					clock.spendMaterial(-12);
+					break;
+				case "School":
+					clock.spendMaterial(-10);
+					break;
+				}
+
+				Destroy (gameObject);
+				Destroy (blueprint.gameObject);
+				return;
+			}
+			else if(clock.getMaterial() < 0){
+
+				switch(gameObject.name){
+				case "City":
+					clock.spendMaterial(-20);
+					break;
+				case "Factory":
+					clock.spendMaterial(-15);
+					break;
+				case "Farm":
+					clock.spendMaterial(-8);
+					break;
+				case "Fishing":
+					clock.spendMaterial(-5);
+					break;
+				case "Lumber":
+					clock.spendMaterial(-10);
+					break;
+				case "Mine":
+					clock.spendMaterial(-10);
+					break;
+				case "Power":
+					clock.spendMaterial(-12);
+					break;
+				case "School":
+					clock.spendMaterial(-10);
+					break;
+				}
 				Destroy (gameObject);
 				Destroy (blueprint.gameObject);
 				return;

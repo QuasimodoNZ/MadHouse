@@ -11,7 +11,7 @@ public class HUD : MonoBehaviour
 		foreach (GameObject o in huds) {
 			o.GetComponent<TextMesh>().text = 
 				Convert.ToString (	"Gold: " + gold + "\t " +
-									"Resources: " + resource + "\t " +
+									"Environment: " + (resource/10) + "%\t " +
 									"Materials: " + material + "\t " +
 				                  	"Food: " + food );
 		}

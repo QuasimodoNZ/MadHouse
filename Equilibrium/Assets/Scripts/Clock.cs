@@ -16,7 +16,7 @@ public class Clock : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		environment = 1000;
-		material = 5;
+		material = 50;
 		gold = 0;
 		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
