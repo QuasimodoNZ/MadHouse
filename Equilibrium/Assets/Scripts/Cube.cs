@@ -18,6 +18,7 @@
 	public enum BuildingState
 	{
 		Menu,
+		Picked,
 		Pallet,
 		Dragging,
 		Built,
@@ -54,18 +55,22 @@
 			if (x > 12 && y < 6 && y > -6){
 				GameObject.Find ("PalletHandler/East").GetComponent<Pallet>().AddCube(gameObject);
 				GameObject.Find ("PalletHandler/EastText").GetComponent<HUD>().isValid = true;
+				disable ();
 			}
 			else if (x < -12 && y < 6 && y > -6){
 				GameObject.Find ("PalletHandler/West").GetComponent<Pallet>().AddCube(gameObject);
 				GameObject.Find ("PalletHandler/WestText").GetComponent<HUD>().isValid = true;
+				disable ();
 			}
 			else if (y > 6 && x < 8 && x > -8){
 				GameObject.Find ("PalletHandler/North").GetComponent<Pallet>().AddCube(gameObject);
 				GameObject.Find ("PalletHandler/NorthText").GetComponent<HUD>().isValid = true;
+				disable ();
 			}
 			else if (y < -6 && x < 8 && x > -8){
 				GameObject.Find ("PalletHandler/South").GetComponent<Pallet>().AddCube(gameObject);
 				GameObject.Find ("PalletHandler/SouthText").GetComponent<HUD>().isValid = true;
+				disable ();
 			}
 			else {
 				gameObject.transform.parent = origin.transform.parent;
@@ -230,6 +235,18 @@
 		}
 	}
 }
+	public void disable(){
+		gameObject.GetComponent<PanGesture>().enabled = false;
+		gameObject.GetComponent<PressGesture>().enabled = false;
+		gameObject.GetComponent<ReleaseGesture>().enabled = false;
+	}
+
+	public void enable(){
+		Debug.Log ("Enabling!");
+		gameObject.GetComponent<PanGesture>().enabled = true;
+		gameObject.GetComponent<PressGesture>().enabled = true;
+		gameObject.GetComponent<ReleaseGesture>().enabled = true;
+	}
 	public void tick(){
 		gameObject.renderer.material.color = Color.white;
 	}

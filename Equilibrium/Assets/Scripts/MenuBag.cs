@@ -9,8 +9,9 @@ public class MenuBag : MonoBehaviour {
 	void Start () {
 		foreach(GameObject obj in GameObject.FindGameObjectsWithTag(Tags.Draggable)){
 			Cube component = obj.GetComponent<Cube>();
-			if(component!=null)
+			if(component!=null){
 				component.setState(Cube.BuildingState.Menu);
+			}
 		}
 	}
 	
@@ -35,8 +36,10 @@ public class MenuBag : MonoBehaviour {
 			//Set building states to be buildable
 			foreach(GameObject obj in GameObject.FindGameObjectsWithTag(Tags.Draggable)){
 				Cube component = obj.GetComponent<Cube>();
-				if(component!=null)
+				if(component!=null){
 					component.setState(Cube.BuildingState.Pallet);
+					component.enable ();
+				}
 			}
 			//Build terrain object
 			GameObject start;
