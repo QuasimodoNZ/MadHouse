@@ -10,6 +10,7 @@ public class Clock : MonoBehaviour
 	private int material;
 	private int gold;
 	private int food;
+	private int population;
 
 	//public GUIText text;
 
@@ -68,10 +69,16 @@ public class Clock : MonoBehaviour
 		{
 				return material;
 		}
+
 		public int getFood ()
 		{
 				return food;
 		}
+
+	public int getPopulation ()
+	{
+		return population;
+	}
 
 	public void spendMaterial(int amount){
 		material = material - amount;
@@ -106,12 +113,18 @@ public class Clock : MonoBehaviour
 		updateResourceHUDs ();
 		}
 
+	public void generatePopulation(){
+		population = population + gold/10;
+		food = food - population;
+		updateResourceHUDs ();
+	}
+
 	public void updateResourceHUDs()
 	{
 		foreach(GameObject obj in GameObject.FindGameObjectsWithTag(Tags.HUD))
 		{
 			HUD component = obj.GetComponent<HUD>();
-			component.updateResourceHUDs(gold, environment, material,food);
+			component.updateResourceHUDs(gold, environment, material,food,population);
 		}
 	}
 
@@ -130,7 +143,11 @@ public class Clock : MonoBehaviour
 						if (ticker != null)
 								ticker.tick (this);
 				}
-				if (environment < 1) {
+
+			generatePopulation ();
+				
+
+				if (environment < 1 || food < 0) {
 						var down = GameObject.FindGameObjectsWithTag (Tags.Draggable);
 						foreach (GameObject o in down) {
 								o.renderer.material.color = Color.black;
