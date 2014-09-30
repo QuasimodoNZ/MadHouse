@@ -9,8 +9,8 @@ public class Clock : MonoBehaviour
 	private int environment;
 	private int material;
 	private int gold;
-	private int food;
-	private int population;
+	private int food = 15;
+	private int population = 10;
 	private int materialsThisTurn = 0;
 	private int foodThisTurn = 0;
 	private int factoryCount = 0;
