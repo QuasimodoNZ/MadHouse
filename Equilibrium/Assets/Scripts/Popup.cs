@@ -4,7 +4,7 @@ using System.Collections;
 public class Popup : MonoBehaviour {
 
 	private GameObject target;
-	private BuildingCosts buildings;
+	private BuildingCosts buildings = new BuildingCosts();
 
 	// Use this for initialization
 	void Start () {

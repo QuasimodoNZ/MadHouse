@@ -11,7 +11,7 @@
 
 	public GameObject menuPrefab;
 	private GameObject menu;
-	private BuildingCosts buildings;
+	private BuildingCosts buildings = new BuildingCosts();
 		
 	public void Start(){
 	}
