@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Blueprint.cs" />
+     <Compile Include="Assets\Scripts\BuildingCosts.cs" />
      <Compile Include="Assets\Scripts\Clock.cs" />
      <Compile Include="Assets\Scripts\CollisionUnions.cs" />
      <Compile Include="Assets\Scripts\Cube.cs" />
