@@ -13,8 +13,8 @@ public class HUD : MonoBehaviour
 				Convert.ToString (	"Materials: " + material + "\t " +
 				                  	"Gold: " + gold + "\t " +							 
 				                    "Food: " + food + "\t " +
-				                    "Population: " + population)+
-									"Environment: " + (resource/10) + "%\t ;
+				                    "Population: " + population)+ "\t " +
+									"Environment: " + (resource/10);
 		}
 	}
 }
