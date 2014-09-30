@@ -11,6 +11,7 @@
 
 	public GameObject menuPrefab;
 	private GameObject menu;
+	private BuildingCosts buildings;
 		
 	public void Start(){
 	}
@@ -87,28 +88,28 @@
 
 				switch(gameObject.name){
 				case "City":
-					clock.spendMaterial(-20);
+					clock.spendMaterial(-(buildings.City));
 					break;
 				case "Factory":
-					clock.spendMaterial(-15);
+					clock.spendMaterial(-(buildings.Factory));
 					break;
 				case "Farm":
-					clock.spendMaterial(-8);
+					clock.spendMaterial(-(buildings.Farm));
 					break;
 				case "Fishing":
-					clock.spendMaterial(-5);
+					clock.spendMaterial(-(buildings.Fishing));
 					break;
 				case "Lumber":
-					clock.spendMaterial(-10);
+					clock.spendMaterial(-(buildings.Lumber));
 					break;
 				case "Mine":
-					clock.spendMaterial(-10);
+					clock.spendMaterial(-(buildings.Mine));
 					break;
 				case "Power":
-					clock.spendMaterial(-12);
+					clock.spendMaterial(-(buildings.Power));
 					break;
 				case "School":
-					clock.spendMaterial(-10);
+					clock.spendMaterial(-(buildings.School));
 					break;
 				}
 
@@ -120,28 +121,28 @@
 
 				switch(gameObject.name){
 				case "City":
-					clock.spendMaterial(-20);
+					clock.spendMaterial(-(buildings.City));
 					break;
 				case "Factory":
-					clock.spendMaterial(-15);
+					clock.spendMaterial(-(buildings.Factory));
 					break;
 				case "Farm":
-					clock.spendMaterial(-8);
+					clock.spendMaterial(-(buildings.Farm));
 					break;
 				case "Fishing":
-					clock.spendMaterial(-5);
+					clock.spendMaterial(-(buildings.Fishing));
 					break;
 				case "Lumber":
-					clock.spendMaterial(-10);
+					clock.spendMaterial(-(buildings.Lumber));
 					break;
 				case "Mine":
-					clock.spendMaterial(-10);
+					clock.spendMaterial(-(buildings.Mine));
 					break;
 				case "Power":
-					clock.spendMaterial(-12);
+					clock.spendMaterial(-(buildings.Power));
 					break;
 				case "School":
-					clock.spendMaterial(-10);
+					clock.spendMaterial(-(buildings.School));
 					break;
 				}
 				Destroy (gameObject);
@@ -203,30 +204,30 @@
 		tag = Tags.Placing;
 		
 		switch(obj.name){
-		case "City":
-			clock.spendMaterial(20);
-			break;
-		case "Factory":
-			clock.spendMaterial(15);
-			break;
-		case "Farm":
-			clock.spendMaterial(8);
-			break;
-		case "Fishing":
-			clock.spendMaterial(5);
-			break;
-		case "Lumber":
-			clock.spendMaterial(10);
-			break;
-		case "Mine":
-			clock.spendMaterial(10);
-			break;
-		case "Power":
-			clock.spendMaterial(12);
-			break;
-		case "School":
-			clock.spendMaterial(10);
-			break;
+				case "City":
+					clock.spendMaterial(buildings.City);
+					break;
+				case "Factory":
+					clock.spendMaterial(buildings.Factory);
+					break;
+				case "Farm":
+					clock.spendMaterial(buildings.Farm);
+					break;
+				case "Fishing":
+					clock.spendMaterial(buildings.Fishing);
+					break;
+				case "Lumber":
+					clock.spendMaterial(buildings.Lumber);
+					break;
+				case "Mine":
+					clock.spendMaterial(buildings.Mine);
+					break;
+				case "Power":
+					clock.spendMaterial(buildings.Power);
+					break;
+				case "School":
+					clock.spendMaterial(buildings.School);
+					break;
 		}
 
 		GameObject newBlueprint = (GameObject)GameObject.Instantiate (blueprintPrefab, gameObject.transform.position, gameObject.transform.rotation);
