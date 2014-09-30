@@ -12,6 +12,7 @@ public class School : BuildingTicker
 				//c.eatFood (upkeep);
 				//c.spendGold (enviormentDamage);
 				c.ruinEnvironment (enviroDamage);
+				c.schoolCounter ();
 		}
 
 	

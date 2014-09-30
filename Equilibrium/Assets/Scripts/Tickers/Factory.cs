@@ -14,6 +14,7 @@ public class Factory : BuildingTicker
 				//c.spendGold (enviormentDamage);
 				c.ruinEnvironment (enviroDamage);
 				c.generateGold (gold);
+				c.factoryCounter ();
 		}
 	public override bool canCollideWith (GameObject other){
 		

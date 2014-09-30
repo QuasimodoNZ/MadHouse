@@ -14,6 +14,7 @@ public class Power : BuildingTicker
 				//c.spendGold (enviormentDamage);
 				c.ruinEnvironment (enviroDamage);
 				c.generateGold (gold);
+				c.powerCounter ();
 	}
 	public override bool canCollideWith (GameObject other){
 		

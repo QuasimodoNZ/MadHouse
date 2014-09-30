@@ -11,6 +11,13 @@ public class Clock : MonoBehaviour
 	private int gold;
 	private int food;
 	private int population;
+	private int materialsThisTurn = 0;
+	private int foodThisTurn = 0;
+	private int factoryCount = 0;
+	private int powerCount = 0;
+	private int schoolCount = 0;
+
+	private double powerBonus = .25, factoryBonus = .1, schoolBonus = .15;
 
 	//public GUIText text;
 
@@ -99,8 +106,7 @@ public class Clock : MonoBehaviour
 	}
 
 	public void generateMaterials(int amount){
-		material = material + amount;
-		updateResourceHUDs ();
+		materialsThisTurn = materialsThisTurn + amount;
 		}
 
 	public void generateGold(int amount){
@@ -109,13 +115,35 @@ public class Clock : MonoBehaviour
 		}
 
 	public void generateFood(int amount){
-		food = food + amount;
-		updateResourceHUDs ();
+		foodThisTurn = foodThisTurn + amount;
 		}
 
 	public void generatePopulation(){
 		population = population + gold/10;
 		food = food - population;
+		updateResourceHUDs ();
+	}
+
+	public void factoryCounter(){
+		factoryCount++;
+	}
+
+	public void powerCounter(){
+		powerCount++;
+	}
+
+	public void schoolCounter(){
+		schoolCount++;
+	}
+
+	private void updateResources(){
+		Debug.Log (powerCount);
+		material = material + materialsThisTurn + Convert.ToInt32(materialsThisTurn * (factoryCount * factoryBonus) + materialsThisTurn * (powerCount * powerBonus));
+		food = food + foodThisTurn + Convert.ToInt32(foodThisTurn * (schoolCount * schoolBonus));
+		factoryCount = 0;
+		powerCount = 0;
+		schoolCount = 0;
+
 		updateResourceHUDs ();
 	}
 
@@ -145,7 +173,9 @@ public class Clock : MonoBehaviour
 				}
 
 			generatePopulation ();
-				
+			updateResources ();
+			materialsThisTurn = 0;
+			foodThisTurn = 0;
 
 				if (environment < 1 || food < 0) {
 						var down = GameObject.FindGameObjectsWithTag (Tags.Draggable);
