@@ -3,18 +3,15 @@ using System.Collections;
 
 public class Mine :BuildingTicker
 {
-		private int enviroDamage = 10;
-		private int gold = 25;
-		private int materialsBuild = 8;
-		private int materialsGenerated = 19;
+		private BuildingCosts buildings = new BuildingCosts();
 	
 	public override void tick (Clock c)
 		{
 				//c.eatFood (upkeep);
 				//c.spendGold (enviormentDamage);
-				c.ruinEnvironment (enviroDamage);
-				c.generateGold (gold);
-				c.generateMaterials (materialsGenerated);
+				c.ruinEnvironment (buildings.MineDamage);
+				c.generateGold (buildings.MineGold);
+				c.generateMaterials (buildings.MineMaterials);
 	}
 	public override bool canCollideWith (GameObject other){
 		

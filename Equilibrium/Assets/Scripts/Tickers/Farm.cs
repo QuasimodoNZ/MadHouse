@@ -3,19 +3,17 @@ using System.Collections;
 
 public class Farm : BuildingTicker
 {
-	private int enviroDamage = 40;
-	private int gold = 5;
-	private int foodGenerated = 30;
-	private int materialsBuild = 8;
+	private BuildingCosts buildings = new BuildingCosts();
 
 
 	public override void tick (Clock c)
 		{
 				//c.eatFood (upkeep);
 				//c.spendGold (enviormentDamage);
-				c.ruinEnvironment (enviroDamage);
-				c.generateGold (gold);
-				c.generateFood (foodGenerated);
+				c.ruinEnvironment (buildings.FarmDamage);
+				c.generateGold (buildings.FarmGold);
+				c.generateFood (buildings.FarmFood);
+				c.generateMaterials (buildings.FarmMaterials);
 		}
 	public override bool canCollideWith (GameObject other){
 		

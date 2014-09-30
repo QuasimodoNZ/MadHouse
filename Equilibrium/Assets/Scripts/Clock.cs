@@ -16,8 +16,9 @@ public class Clock : MonoBehaviour
 	private int factoryCount = 0;
 	private int powerCount = 0;
 	private int schoolCount = 0;
+	private BuildingCosts buildings = new BuildingCosts();
 
-	private double powerBonus = .25, factoryBonus = .1, schoolBonus = .15;
+	private double powerBonus, factoryBonus, schoolBonus;
 
 	//public GUIText text;
 
@@ -26,6 +27,9 @@ public class Clock : MonoBehaviour
 		environment = 1000;
 		material = 50;
 		gold = 0;
+		powerBonus = buildings.PowerBonus;
+		factoryBonus = buildings.FactoryBonus;
+		schoolBonus = buildings.SchoolBonus;
 		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
 		updateVisualDamage ();
@@ -120,7 +124,7 @@ public class Clock : MonoBehaviour
 
 	public void generatePopulation(){
 		population = population + gold/10;
-		food = food - population;
+		food = food - population/2;
 		updateResourceHUDs ();
 	}
 

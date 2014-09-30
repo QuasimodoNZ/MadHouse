@@ -3,15 +3,14 @@ using System.Collections;
 
 public class City : BuildingTicker
 {
-		private int enviroDamage = 20;
-		private int goldPerTurn = 40;
+		private BuildingCosts buildings = new BuildingCosts ();
 
 		public override void tick (Clock c)
 		{
 			//c.eatFood (upkeep);
 			//c.spendGold (enviormentDamage);
-			c.ruinEnvironment (enviroDamage);
-			c.generateGold (goldPerTurn);
+			c.ruinEnvironment (buildings.CityDamage);
+			c.generateGold (buildings.CityGold);
 		}
 
 	public override bool canCollideWith (GameObject other){

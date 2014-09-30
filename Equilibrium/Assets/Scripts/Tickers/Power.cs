@@ -3,17 +3,14 @@ using System.Collections;
 
 public class Power : BuildingTicker
 {
-	private int enviroDamage = 35;
-	private int gold = 9;
-	private double bonus = .25; 	//increase materials genearted for all buildings by 25%
-	private int materialsBuild = 12;
+	private BuildingCosts buildings = new BuildingCosts();
 	
 	public override void tick (Clock c)
 		{
 				//c.eatFood (upkeep);
 				//c.spendGold (enviormentDamage);
-				c.ruinEnvironment (enviroDamage);
-				c.generateGold (gold);
+				c.ruinEnvironment (buildings.PowerDamage);
+				c.generateGold (buildings.PowerGold);
 				c.powerCounter ();
 	}
 	public override bool canCollideWith (GameObject other){
