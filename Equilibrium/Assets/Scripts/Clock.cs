@@ -124,7 +124,7 @@ public class Clock : MonoBehaviour
 
 	public void generatePopulation(){
 		population = population + gold/10;
-		food = food - population/2;
+		food = food - Convert.ToInt32(population * .75);
 		updateResourceHUDs ();
 	}
 
