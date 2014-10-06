@@ -17,6 +17,8 @@ public class Clock : MonoBehaviour
 	private int powerCount = 0;
 	private int schoolCount = 0;
 	private BuildingCosts buildings = new BuildingCosts();
+	private bool menuOpen = false;
+	private TimeSpan timePressed = new TimeSpan();
 
 	private double powerBonus, factoryBonus, schoolBonus;
 
@@ -45,25 +47,41 @@ public class Clock : MonoBehaviour
 		{
 				GetComponent<PressGesture> ().Pressed += pressedHandler;
 				GetComponent<ReleaseGesture> ().Released += releasedHandler;
+				//GetComponent<LongPressGesture> ().LongPressed += LongPressHandler;
 		}
 	
 		private void OnDisable ()
 		{
 				GetComponent<PressGesture> ().Pressed -= pressedHandler;
 				GetComponent<ReleaseGesture> ().Released -= releasedHandler;
+				//GetComponent<LongPressGesture> ().LongPressed -= LongPressHandler;
 		}
 
 	private void releasedHandler (object sender, EventArgs e)
 	{
+		TimeSpan temp = DateTime.Now.TimeOfDay - timePressed;
+		if (temp.TotalSeconds > 1) {
+			menuOpen = true;
+			return;
+		}
+		if (menuOpen)
+						menuOpen = false;
 		Debug.LogWarning ("Taking turn!");
 		nextTurn ();
 		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
 	}
 
+	private void LongPressHandler(object sender, EventArgs e)
+	{
+		menuOpen = true;
+		Debug.Log ("long press!");
+	}
+
 		private void pressedHandler (object sender, EventArgs e)
 		{
 				Debug.LogWarning ("do I work?");
+				timePressed = DateTime.Now.TimeOfDay;
 		}
 
 		public int getGold ()
