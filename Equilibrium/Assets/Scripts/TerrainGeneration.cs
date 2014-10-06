@@ -41,7 +41,6 @@ public class TerrainGeneration : MonoBehaviour {
 					GameObject resource = (GameObject) Instantiate ((Resources.Load (t)), temp, new Quaternion(0, 0, 0, 0));
 					resource.name = t;
 					resource.transform.parent = gameObject.transform;
-					resource.renderer.material.mainTexture.filterMode = FilterMode.Point;
 					//resource.tag = Tags.Resource;
 				}
 
