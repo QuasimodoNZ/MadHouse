@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: 6d52b65929587fd47a05bd10f8a86700
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - menuButtonsPrefab: {fileID: 100000, guid: 6317dac5d45ebee48a840ffe14fa6db3, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

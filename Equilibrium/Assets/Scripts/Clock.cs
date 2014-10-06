@@ -19,6 +19,9 @@ public class Clock : MonoBehaviour
 	private BuildingCosts buildings = new BuildingCosts();
 	private bool menuOpen = false;
 	private TimeSpan timePressed = new TimeSpan();
+	public GameObject menuButtonsPrefab;
+	private bool gameOver = false;
+	private GameObject menuButtonsInstance;
 
 	private double powerBonus, factoryBonus, schoolBonus;
 
@@ -60,16 +63,32 @@ public class Clock : MonoBehaviour
 	private void releasedHandler (object sender, EventArgs e)
 	{
 		TimeSpan temp = DateTime.Now.TimeOfDay - timePressed;
-		if (temp.TotalSeconds > 1) {
+
+		if (temp.TotalMilliseconds > 750 && !menuOpen) {
 			menuOpen = true;
+
+			menuButtonsInstance = Instantiate (menuButtonsPrefab) as GameObject;
+			menuButtonsInstance.transform.position = gameObject.transform.position;
+			menuButtonsInstance.name = "Clock Menu";
+			menuButtonsInstance.transform.parent = gameObject.transform;
+			//obj.GetComponent<ClockMenu>().setTarget(gameObject);
+			//menu = obj;
+
 			return;
 		}
-		if (menuOpen)
-						menuOpen = false;
+		if (menuOpen) {
+			menuOpen = false;
+			Destroy (menuButtonsInstance);
+			menuButtonsInstance = null;
+			return;
+		}
+
 		Debug.LogWarning ("Taking turn!");
-		nextTurn ();
-		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
-		updateResourceHUDs ();
+		if (!gameOver) {
+						nextTurn ();
+						//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
+						updateResourceHUDs ();
+				}
 	}
 
 	private void LongPressHandler(object sender, EventArgs e)
@@ -210,7 +229,8 @@ public class Clock : MonoBehaviour
 								o.renderer.material.color = Color.black;
 								o.GetComponent<PressGesture> ().enabled = false;
 						}
-						OnDisable ();
+					gameOver = true;
+						//OnDisable ();
 				}
 		}
 
