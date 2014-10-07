@@ -19,7 +19,7 @@ public class Power : BuildingTicker
 			return false;
 		
 		
-		if (other.name != "Trees" && other.name != "Mountain" && other.name != "Water" && other.name != "Fish")
+		if (other.name == "Oil")
 			return true;
 
 		return false;

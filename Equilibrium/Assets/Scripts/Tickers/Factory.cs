@@ -19,7 +19,7 @@ public class Factory : BuildingTicker
 			return false;
 		
 		
-		if (other.name != "Trees" && other.name != "Mountain" && other.name != "Water" && other.name != "Fish")
+		if (other.name == "Grass" || other.name =="Farmland" )
 			return true;
 
 		return false;

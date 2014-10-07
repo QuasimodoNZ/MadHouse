@@ -19,7 +19,7 @@ public class Mine :BuildingTicker
 			return false;
 		
 		
-		if (other.name == "Mountain" || other.name == "Iron Ore" || other.name == "Copper Ore" || other.name == "Gold Ore" || other.name == "Coal")
+		if (other.name == "Mountain" || other.name == "Iron Ore" || other.name == "Copper Ore" || other.name == "Gold Ore" || other.name == "Coal" || other.name == "Oil")
 			return true;
 		
 		return false;
