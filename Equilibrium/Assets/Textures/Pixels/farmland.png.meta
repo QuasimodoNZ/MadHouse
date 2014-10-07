@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 33e0ae8df49b794439c9fd2a164bfc77
+guid: 814f99ce7c3334f43887ededc442a3c2
 TextureImporter:
   fileIDToRecycleName:
-    21300000: grass
+    21300000: farmland
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,13 +22,13 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50

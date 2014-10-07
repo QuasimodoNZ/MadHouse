@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 3e9dc9ce7d2874341b39e8ff59a8ca11
+guid: 6bb0eb9a1e8d74546aa6b3aaf4426ebb
 TextureImporter:
   fileIDToRecycleName:
-    21300000: coalore
+    21300000: oil
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,13 +22,13 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50

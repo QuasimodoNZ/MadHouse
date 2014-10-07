@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 657f4a9ba478e7541a4ef6e652abb9c4
+guid: 412e9c41e51d72749a7d826a243e082a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: farmland
+    21300000: fish
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,13 +22,13 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50

@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: bd8a6ab50061ee1478bf48db633d5396
+guid: 682144daf4ae9fb439c5f90aae9ae3ab
 TextureImporter:
   fileIDToRecycleName:
-    21300000: oil
+    21300000: mountain
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,13 +22,13 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
