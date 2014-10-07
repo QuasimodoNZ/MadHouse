@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\CollisionUnions.cs" />
      <Compile Include="Assets\Scripts\Cube.cs" />
      <Compile Include="Assets\Scripts\FadingPopup.cs" />
+     <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\GameRecord.cs" />
      <Compile Include="Assets\Scripts\HUD.cs" />
      <Compile Include="Assets\Scripts\Improve.cs" />

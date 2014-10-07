@@ -9,6 +9,7 @@ public class Clock : MonoBehaviour
 	private int environment;
 	private int material;
 	private int gold;
+	private int currentTurn = 0;
 	private int food = 15;
 	private int population = 10;
 	private int materialsThisTurn = 0;
@@ -214,6 +215,7 @@ public class Clock : MonoBehaviour
 
 		public void nextTurn ()
 		{
+		FadingPopup.SpawnPopup ("" + currentTurn++, gameObject.transform.position.x, gameObject.transform.position.y, Color.black);
 				var collect = GameObject.FindGameObjectsWithTag (Tags.Built);
 				foreach (GameObject o in collect) {
 						BuildingTicker ticker = o.GetComponent<BuildingTicker> ();

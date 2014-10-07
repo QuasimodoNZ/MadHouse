@@ -22,7 +22,7 @@ public class FadingPopup: MonoBehaviour
 		void Update ()
 		{
 				if (alpha > 0) {
-						transform.position += new Vector3 (0, 0, 0);// scroll * Time.deltaTime); 
+						transform.position += new Vector3 (0, scroll * Time.deltaTime, 0);//  
 						alpha -= Time.deltaTime / duration;
 						Color previous = renderer.material.color;
 						renderer.material.color = new Color (previous.r, previous.g, previous.b, alpha);      
@@ -38,9 +38,8 @@ public class FadingPopup: MonoBehaviour
 				x = Mathf.Clamp (x, -14.3f, 14.3f); // clamp position to screen to ensure
 				y = Mathf.Clamp (y, -7.2f, 7.2f);  // the string will be visible
 				float angle = Mathf.Atan2 (y, x) * 180 / Mathf.PI;
-				GameObject gui = Instantiate (instance, new Vector3 (x, y, 0), Quaternion.identity) as GameObject;
-				if (colour != null)
-						gui.renderer.material.color = colour;
+				GameObject gui = Instantiate (instance, new Vector3 (x, y, -12), Quaternion.identity) as GameObject;
+				gui.GetComponent<TextMesh>().color = colour;
 				gui.transform.Rotate (0, 0, angle + 90);
 				gui.GetComponent<TextMesh> ().text = message;
 		}
