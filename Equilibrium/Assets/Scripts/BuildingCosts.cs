@@ -19,7 +19,7 @@ public class BuildingCosts : MonoBehaviour {
 	public int FishingDamage = 15;
 	public int MineDamage = 10;
 	public int PowerDamage = 35;
-	public int SchoolDamage = -20;
+	public int SchoolDamage = -15;
 
 	public int CityGold = 40;
 	public int FactoryGold = 30;
