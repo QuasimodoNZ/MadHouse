@@ -142,8 +142,8 @@ public class Clock : MonoBehaviour
 
 	public void ruinEnvironment (int amount){
 		environment = environment - amount;
-		if (environment > 100)
-						environment = 100;
+		if (environment > 1000)
+						environment = 1000;
 		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
 	}
