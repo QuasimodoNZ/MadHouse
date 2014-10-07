@@ -46,6 +46,18 @@ public class GameRecord : MonoBehaviour {
 		return environment;
 	}
 
+	public int getFinalGold(){
+		int gold = 0;
+		foreach (TurnRecord t in turns) {
+			gold = t.getGold();
+		}
+		return gold;
+	}
+
+	public int getNumTurns(){
+		return turns.Count;
+	}
+
 	// Use this for initialization
 	void Start () {
 	

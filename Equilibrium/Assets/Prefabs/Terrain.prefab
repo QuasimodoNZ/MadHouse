@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuButtonsPrefab: {fileID: 100000, guid: 6317dac5d45ebee48a840ffe14fa6db3, type: 2}
+  gameOverScreen: {fileID: 100000, guid: d81e28610c65fd24780670eee7773f8c, type: 2}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

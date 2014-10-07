@@ -22,6 +22,8 @@ public class Clock : MonoBehaviour
 	public GameObject menuButtonsPrefab;
 	private bool gameOver = false;
 	private GameObject menuButtonsInstance;
+	private GameRecord game = new GameRecord();
+	public GameObject gameOverScreen;
 
 	private double powerBonus, factoryBonus, schoolBonus;
 
@@ -85,6 +87,7 @@ public class Clock : MonoBehaviour
 
 		Debug.LogWarning ("Taking turn!");
 		if (!gameOver) {
+						
 						nextTurn ();
 						//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 						updateResourceHUDs ();
@@ -183,6 +186,9 @@ public class Clock : MonoBehaviour
 		Debug.Log (powerCount);
 		material = material + materialsThisTurn + Convert.ToInt32(materialsThisTurn * (factoryCount * factoryBonus) + materialsThisTurn * (powerCount * powerBonus));
 		food = food + foodThisTurn + Convert.ToInt32(foodThisTurn * (schoolCount * schoolBonus));
+		//Debug.Log ("gold: " + gold + ", materials: " + material + ", food: " + food);
+		TurnRecord t = new TurnRecord (gold, material, food, population, environment, foodThisTurn, materialsThisTurn);
+		game.addTurn (t);
 		factoryCount = 0;
 		powerCount = 0;
 		schoolCount = 0;
@@ -232,6 +238,7 @@ public class Clock : MonoBehaviour
 								o.GetComponent<PressGesture> ().enabled = false;
 						}
 					gameOver = true;
+					GameObject endScreen = GameObject.Instantiate(gameOverScreen) as GameObject;
 						//OnDisable ();
 				}
 		}
