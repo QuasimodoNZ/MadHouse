@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fec49a4e452842089a9ac8e6a4c6f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  red: {fileID: 2100000, guid: 98c7a10d930214b6793f63edc275ec0f, type: 2}
-  green: {fileID: 2100000, guid: 6ca5295766c104ae9848e6dbdead6967, type: 2}
+  red: {fileID: 2100000, guid: 5f7f3a920e133684bb05a87e72994f7f, type: 2}
+  green: {fileID: 2100000, guid: 0af28cef59047384499d78993cc0ee75, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
