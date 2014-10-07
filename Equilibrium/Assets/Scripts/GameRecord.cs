@@ -15,17 +15,17 @@ public class GameRecord : MonoBehaviour {
 	}
 
 	public int getTotalFood(){
-		int food = 0;
+		int food = 15;
 		foreach(TurnRecord t in turns){
-			food = t.getFoodGenerated();
+			food += t.getFoodGenerated();
 		}
 		return food;
 	}
 
 	public int getTotalMaterials(){
-		int materials = 0;
+		int materials = 50;
 		foreach(TurnRecord t in turns){
-			materials = t.getMaterialsGenerated();
+			materials += t.getMaterialsGenerated();
 		}
 		return materials;
 	}
