@@ -4,7 +4,7 @@ using System;
 
 public class GameRecord : MonoBehaviour {
 
-	private ArrayList turns = new ArrayList<TurnRecord>();
+	private ArrayList turns = new ArrayList();
 
 	public GameRecord(){
 
