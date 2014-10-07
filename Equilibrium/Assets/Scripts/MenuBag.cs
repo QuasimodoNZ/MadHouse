@@ -25,7 +25,7 @@ public class MenuBag : MonoBehaviour {
 		foreach (Transform child in transform) {
 			bagCount++;
 		}
-		if (bagCount == 0) {
+		if (bagCount == 2) {
 			//THIS IS WHERE THE GAME STARTS
 			//Destroy empty pallets
 			foreach(GameObject obj in GameObject.FindGameObjectsWithTag(Tags.Pallet)){
