@@ -242,7 +242,7 @@ public class Clock : MonoBehaviour
 			string deathMessage = "";
 			if(food < 0)deathMessage = "Your people were hungry! They left.";
 			else deathMessage = "You destroyed the environment and everyone left!";
-					endScreen.GetComponent<GameOver>().setText(deathMessage + "\n\nTotals:\nGold: " + game.getFinalGold() + ", Materials: " + game.getTotalMaterials() + ", Food: " + game.getTotalFood()
+					endScreen.GetComponent<GameOver>().setText(deathMessage + "\nYou survived: " +game.getNumTurns() + " turns" + "\n\nTotals:\nGold: " + game.getFinalGold() + ", Materials: " + game.getTotalMaterials() + ", Food: " + game.getTotalFood()
 			                                           + "\n\nEnd Game:\nPopulation: " + game.getFinalPopulation() + ", Environment: " + game.getFinalEnvironment()/10 + "%, Food: " + food + "\n");
 						//OnDisable ();
 				}
