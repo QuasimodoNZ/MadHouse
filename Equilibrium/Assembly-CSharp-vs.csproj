@@ -49,8 +49,11 @@
      <Compile Include="Assets\Scripts\Blueprint.cs" />
      <Compile Include="Assets\Scripts\BuildingCosts.cs" />
      <Compile Include="Assets\Scripts\Clock.cs" />
+     <Compile Include="Assets\Scripts\ClockMenuExit.cs" />
+     <Compile Include="Assets\Scripts\ClockMenuRestart.cs" />
      <Compile Include="Assets\Scripts\CollisionUnions.cs" />
      <Compile Include="Assets\Scripts\Cube.cs" />
+     <Compile Include="Assets\Scripts\FadingPopup.cs" />
      <Compile Include="Assets\Scripts\HUD.cs" />
      <Compile Include="Assets\Scripts\Improve.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
