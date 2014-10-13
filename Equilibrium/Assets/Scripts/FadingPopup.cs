@@ -19,6 +19,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using UnityEngine;
 using System.Collections;
 
+/*
+ * allows any object to generate text on the screen, aligned towards the centre
+ */ 
 public class FadingPopup: MonoBehaviour
 {
 

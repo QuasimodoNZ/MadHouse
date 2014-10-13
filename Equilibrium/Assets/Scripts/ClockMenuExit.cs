@@ -20,6 +20,9 @@ using UnityEngine;
 using System;
 using TouchScript.Gestures;
 
+/*
+ * Exit button for the clock menu, exits the game (duh)
+ */ 
 public class ClockMenuExit : MonoBehaviour {
 
 	// Use this for initialization

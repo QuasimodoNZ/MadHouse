@@ -20,6 +20,9 @@ using UnityEngine;
 using System.Collections;
 using System;
 
+/*
+ * displays scores underneath each players pallet
+ */ 
 public class HUD : MonoBehaviour 
 {
 	public bool isValid = false;

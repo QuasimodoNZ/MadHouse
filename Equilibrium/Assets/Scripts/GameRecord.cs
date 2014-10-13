@@ -20,13 +20,14 @@ using UnityEngine;
 using System.Collections;
 using System;
 
+/*
+ * used for keeping track of all of the scores throughout the game
+ */ 
 public class GameRecord : MonoBehaviour {
 
 	private ArrayList turns = new ArrayList();
 
-	public GameRecord(){
-
-	}
+	public GameRecord(){}
 
 	public void addTurn(TurnRecord t){
 		turns.Add (t);

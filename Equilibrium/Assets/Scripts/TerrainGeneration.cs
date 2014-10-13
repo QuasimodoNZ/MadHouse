@@ -19,13 +19,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using UnityEngine;
 using System.Collections;
 using System.IO; 
+
+/*
+ * reads in the map from a text file and creates it
+ */ 
 public class TerrainGeneration : MonoBehaviour {
-
-
-
 
 	public string filename;
 	// Use this for initialization
+	//reads in the file.
 	void Start () {
 		TextAsset mytext = Resources.Load ("GameMap") as TextAsset;
 		string load = mytext.text;
@@ -44,15 +46,10 @@ public class TerrainGeneration : MonoBehaviour {
 								}
 						}
 				}
-		
 
-
-	//GameObject resource = (GameObject) Resources.Load (generateDiffResources(i, j));
-	//Vector3 temp = new Vector3(i, j, 1);
-	//Instantiate(resource, temp, new Quaternion(0, 0, 0, 0));
-	//resource.tag = Tags.Resource;
-
-
+	/*
+	 * creates and places the relevant tile
+	 */ 
 	 void placeTile(float x,float y,char type) {
 					string t = getTerrainName (type);
 					Vector3 temp = new Vector3(x, y, 2f);
@@ -62,7 +59,9 @@ public class TerrainGeneration : MonoBehaviour {
 					//resource.tag = Tags.Resource;
 				}
 
-
+	/*
+	 * converts letters in the text file to resource names.
+	 */ 
 	private string getTerrainName(char type)
 	{
 		switch (type) {

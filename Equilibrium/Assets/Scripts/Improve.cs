@@ -20,6 +20,9 @@ using UnityEngine;
 using System;
 using TouchScript.Gestures;
 
+/*
+ * "upgrade" button on the buildings menu, functionality not fully implemented.
+ */ 
 public class Improve : MonoBehaviour {
 
 	private GameObject menu;

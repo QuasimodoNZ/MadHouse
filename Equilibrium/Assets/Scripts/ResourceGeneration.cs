@@ -20,6 +20,9 @@ using UnityEngine;
 using System.Collections;
 using System;
 
+/*
+ * allows for random generation of a map, needs to be further implemented however
+ */ 
 public class ResourceGeneration : MonoBehaviour {
 	
 	//public GameObject resource = (GameObject) Resources.Load("Basic Resource");

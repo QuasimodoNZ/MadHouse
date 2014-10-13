@@ -20,6 +20,9 @@ using UnityEngine;
 using System;
 using TouchScript.Gestures;
 
+/*
+ * removes the relevant building (duh)
+ */ 
 public class Remove : MonoBehaviour {
 	
 	private GameObject menu;

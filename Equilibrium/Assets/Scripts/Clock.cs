@@ -21,13 +21,18 @@ using System.Collections;
 using TouchScript.Gestures;
 using System;
 
+
+/**
+ * The main powerhouse during the game. Used to update the turn count and calls 
+ * all necessary building tickers on all buildings that have been placed.
+ * Also maintains scores during the game.
+ */ 
 public class Clock : MonoBehaviour
 {
-
 	private int environment;
 	private int material;
 	private int gold;
-	private int currentTurn = 0;
+	private int currentTurn = 1;
 	private int food = 15;
 	private int population = 10;
 	private int materialsThisTurn = 0;
@@ -46,10 +51,9 @@ public class Clock : MonoBehaviour
 
 	private double powerBonus, factoryBonus, schoolBonus;
 
-	//public GUIText text;
-
 	// Use this for initialization
 	void Start () {
+		//Game starting point
 		environment = 1000;
 		material = 50;
 		gold = 0;
@@ -58,7 +62,6 @@ public class Clock : MonoBehaviour
 		schoolBonus = buildings.SchoolBonus;
 		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
-		updateVisualDamage ();
 	}
 	
 		// Update is called once per frame
@@ -67,13 +70,19 @@ public class Clock : MonoBehaviour
 	
 		}
 
+		/*
+		 * allows touch handling for the clock
+		 */ 
 		private void OnEnable ()
 		{
 				GetComponent<PressGesture> ().Pressed += pressedHandler;
 				GetComponent<ReleaseGesture> ().Released += releasedHandler;
 				//GetComponent<LongPressGesture> ().LongPressed += LongPressHandler;
 		}
-	
+
+		/*
+		 * removes touch handling for the clock
+		 */ 
 		private void OnDisable ()
 		{
 				GetComponent<PressGesture> ().Pressed -= pressedHandler;
@@ -81,10 +90,14 @@ public class Clock : MonoBehaviour
 				//GetComponent<LongPressGesture> ().LongPressed -= LongPressHandler;
 		}
 
+	/*
+	 * called when touch event ends on the clock face
+	 */ 
 	private void releasedHandler (object sender, EventArgs e)
 	{
 		TimeSpan temp = DateTime.Now.TimeOfDay - timePressed;
 
+		//check to see if they held it for a while, if so open menu
 		if (temp.TotalMilliseconds > 750 && !menuOpen) {
 			menuOpen = true;
 
@@ -92,11 +105,9 @@ public class Clock : MonoBehaviour
 			menuButtonsInstance.transform.position = gameObject.transform.position;
 			menuButtonsInstance.name = "Clock Menu";
 			menuButtonsInstance.transform.parent = gameObject.transform;
-			//obj.GetComponent<ClockMenu>().setTarget(gameObject);
-			//menu = obj;
-
 			return;
 		}
+		//destroy menu if open
 		if (menuOpen) {
 			menuOpen = false;
 			Destroy (menuButtonsInstance);
@@ -108,17 +119,13 @@ public class Clock : MonoBehaviour
 		if (!gameOver) {
 						
 						nextTurn ();
-						//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 						updateResourceHUDs ();
 				}
 	}
 
-	private void LongPressHandler(object sender, EventArgs e)
-	{
-		menuOpen = true;
-		Debug.Log ("long press!");
-	}
-
+	/*
+	 * starts the timer for long press
+	 */ 
 		private void pressedHandler (object sender, EventArgs e)
 		{
 				Debug.LogWarning ("do I work?");
@@ -152,21 +159,19 @@ public class Clock : MonoBehaviour
 
 	public void spendMaterial(int amount){
 		material = material - amount;
-		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
 	}
 
 	public void spendGold(int amount){
 		gold -= amount;
-		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
 	}
 
 	public void ruinEnvironment (int amount){
 		environment = environment - amount;
+		//cap the environment at 1000 (100%)
 		if (environment > 1000)
 						environment = 1000;
-		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
 		updateResourceHUDs ();
 	}
 
@@ -189,6 +194,12 @@ public class Clock : MonoBehaviour
 		updateResourceHUDs ();
 	}
 
+	public void eatFood (int amount)
+	{
+		food -= amount;
+		updateResourceHUDs ();		
+	}
+
 	public void factoryCounter(){
 		factoryCount++;
 	}
@@ -201,11 +212,12 @@ public class Clock : MonoBehaviour
 		schoolCount++;
 	}
 
+	/*
+	 * calculate all materials and food generated that turn and add it to current stockpile
+	 */ 
 	private void updateResources(){
-		Debug.Log (powerCount);
 		material = material + materialsThisTurn + Convert.ToInt32(materialsThisTurn * (factoryCount * factoryBonus) + materialsThisTurn * (powerCount * powerBonus));
 		food = food + foodThisTurn + Convert.ToInt32(foodThisTurn * (schoolCount * schoolBonus));
-		//Debug.Log ("gold: " + gold + ", materials: " + material + ", food: " + food);
 		TurnRecord t = new TurnRecord (gold, material, food, population, environment, foodThisTurn, materialsThisTurn);
 		game.addTurn (t);
 		factoryCount = 0;
@@ -215,6 +227,9 @@ public class Clock : MonoBehaviour
 		updateResourceHUDs ();
 	}
 
+	/*
+	 * update all the player HUDs with new values.
+	 */ 
 	public void updateResourceHUDs()
 	{
 		foreach(GameObject obj in GameObject.FindGameObjectsWithTag(Tags.HUD))
@@ -224,28 +239,28 @@ public class Clock : MonoBehaviour
 		}
 	}
 
-		public void eatFood (int amount)
-		{
-				food -= amount;
-				updateResourceHUDs ();		
-		//text.text = Convert.ToString ("Gold: " + gold + "\nResources: " + resource + "\nMaterials: " + material);
-		}
-
+	/*
+	 * move on to the next turn
+	 */ 
 		public void nextTurn ()
 		{
 		FadingPopup.SpawnPopup ("" + currentTurn++, gameObject.transform.position.x, gameObject.transform.position.y, Color.black);
 				var collect = GameObject.FindGameObjectsWithTag (Tags.Built);
+				
+				//call all the building tickers
 				foreach (GameObject o in collect) {
 						BuildingTicker ticker = o.GetComponent<BuildingTicker> ();
 						if (ticker != null)
 								ticker.tick (this);
 				}
 
+			//update values and display
 			generatePopulation ();
 			updateResources ();
 			materialsThisTurn = 0;
 			foodThisTurn = 0;
 
+				//have you lost yet?
 				if (environment < 1 || food < 0) {
 						var down = GameObject.FindGameObjectsWithTag (Tags.Draggable);
 						foreach (GameObject o in down) {
@@ -257,18 +272,14 @@ public class Clock : MonoBehaviour
 								o.renderer.material.color = Color.black;
 								o.GetComponent<PressGesture> ().enabled = false;
 						}
+					//lost, bring up stats screen
 					gameOver = true;
 					GameObject endScreen = GameObject.Instantiate(gameOverScreen) as GameObject;
-			string deathMessage = "";
-			if(food < 0)deathMessage = "Your people were hungry! They left.";
-			else deathMessage = "You destroyed the environment and everyone left!";
-					endScreen.GetComponent<GameOver>().setText(deathMessage + "\nYou survived: " +game.getNumTurns() + " turns" + "\n\nTotals:\nGold: " + game.getFinalGold() + ", Materials: " + game.getTotalMaterials() + ", Food: " + game.getTotalFood()
-			                                           + "\n\nEnd Game:\nPopulation: " + game.getFinalPopulation() + ", Environment: " + game.getFinalEnvironment()/10 + "%, Food: " + food + "\n");
-						//OnDisable ();
+					string deathMessage = "";
+					if(food < 0)deathMessage = "Your people were hungry! They left.";
+					else deathMessage = "You destroyed the environment and everyone left!";
+							endScreen.GetComponent<GameOver>().setText(deathMessage + "\nYou survived: " +game.getNumTurns() + " turns" + "\n\nTotals:\nGold: " + game.getFinalGold() + ", Materials: " + game.getTotalMaterials() + ", Food: " + game.getTotalFood()
+					                                           + "\n\nEnd Game:\nPopulation: " + game.getFinalPopulation() + ", Environment: " + game.getFinalEnvironment()/10 + "%, Food: " + food + "\n");
 				}
 		}
-
-	public void updateVisualDamage(){
-
-	}
 }

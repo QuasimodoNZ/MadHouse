@@ -20,6 +20,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	using System;
 	using TouchScript.Gestures;
 
+	/*
+	 * used to represent every building and tile in the game.
+	 */ 
 	public class Cube : MonoBehaviour {
 	private GameObject origin; // used to return to original position in the bag.
 
@@ -34,6 +37,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	public void Start(){
 	}
 
+	/*
+	 * possible states that buildings can be in
+	 */ 
 	public enum BuildingState
 	{
 		Menu,
@@ -66,8 +72,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		state = newState;
 	}
 
+	/*
+	 * called when a building is placed on the map
+	 */ 
 	private void releasedHandler (object sender, EventArgs e)
 	{
+		//used for selecting buildings at the beginning of the game
 		if (state == BuildingState.Menu) {
 			float x = gameObject.transform.position.x;
 			float y = gameObject.transform.position.y;
@@ -101,6 +111,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			}
 			Destroy (origin);
 		}
+
+		//building is currently being placed on the map, but not released yet
 		if (state == BuildingState.Dragging) {
 			Vector3 pos = blueprint.transform.position;
 			var controller = GameObject.FindGameObjectWithTag (Tags.GameController);
@@ -134,7 +146,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 					clock.spendMaterial(-(buildings.School));
 					break;
 				}
-
 				Destroy (gameObject);
 				Destroy (blueprint.gameObject);
 				return;
@@ -171,6 +182,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 				Destroy (blueprint.gameObject);
 				return;
 			}
+			//can place building
 			Destroy (blueprint.gameObject);
 			GetComponent<PanGesture>().enabled = false;
 			pos.x = RoundOff (pos.x);
@@ -183,7 +195,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		}
 	}
 
+	/*
+	 * building has been pressed
+	 */ 
 	private void pressedHandler (object sender, EventArgs e){
+		//are we choosing building at the beginning of the game?
 	if (state == BuildingState.Menu)	
 	{
 		origin = Instantiate (gameObject) as GameObject;
@@ -193,12 +209,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		origin.SetActive (false);
 		gameObject.transform.parent = null;
 	} else {
+		//check to see that the game is running properly
 		var controller = GameObject.FindGameObjectWithTag (Tags.GameController);
 		var clock = controller.GetComponent<Clock> ();
 		if (clock == null) {
 			Debug.LogError ("Oh shit no clock!");
 		}
+	//building is built
 	if (state == BuildingState.Built) {
+		//create building menu if one doesn't exist
 		if (menu == null){
 			GameObject obj = Instantiate (menuPrefab) as GameObject;
 			obj.transform.position = gameObject.transform.position;
@@ -206,12 +225,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			obj.transform.parent = gameObject.transform;
 			obj.GetComponent<Popup>().setTarget(gameObject);
 			menu = obj;
-		} else {
+		} 
+		//if one does exist destroy it
+		else {
 			Destroy (menu);
 			menu = null;
 		}
 	}
+	//if the building is in the pallet
 	if (state == BuildingState.Pallet) {
+		//create a copy of the building, but disable it's creation methods etc.
 		var obj = Instantiate (gameObject) as GameObject;
 		obj.name = (gameObject.name);
 		obj.GetComponent<Cube> ().enabled = true;
@@ -221,10 +244,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		var pos = obj.transform.position;
 		pos.z = -3.0f;
 		gameObject.transform.position = pos;
-		//gameObject.name = "placed" + gameObject.name;
 		state = BuildingState.Dragging;
 		tag = Tags.Placing;
 		
+		//spend materials for building
 		switch(obj.name){
 				case "City":
 					clock.spendMaterial(buildings.City);
@@ -251,7 +274,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 					clock.spendMaterial(buildings.School);
 					break;
 		}
-
+		
+		//create blueprint for the building
 		GameObject newBlueprint = (GameObject)GameObject.Instantiate (blueprintPrefab, gameObject.transform.position, gameObject.transform.rotation);
 		blueprint = newBlueprint.GetComponent<Blueprint> ();
 		blueprint.setParent (this.gameObject);

@@ -20,6 +20,9 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+ * used for the player pallets in the game which hold the buildings that can be placed
+ */ 
 public class Pallet : MonoBehaviour {
 
 	private ArrayList cubes = new ArrayList();
@@ -37,6 +40,9 @@ public class Pallet : MonoBehaviour {
 	
 	}
 
+	/*
+	 * add a building to the pallet during building selection
+	 */ 
 	public void AddCube (GameObject c){
 		var localCube = c.GetComponent<Cube>();
 		if (localCube == null){
@@ -63,6 +69,9 @@ public class Pallet : MonoBehaviour {
 		return ((index) - ((listLength - 1) / 2f)) * (TILE_SCALE + PADDING);
 	}
 
+	/*
+	 * used for dynamically scaling the pallet as buildings are added to a pallet
+	 */ 
 	private float getNewLength(int listLength){
 		return (TILE_SCALE + PADDING) * listLength;
 	}

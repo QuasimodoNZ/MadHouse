@@ -20,6 +20,9 @@ using UnityEngine;
 using System;
 using TouchScript.Gestures;
 
+/*
+ * used for restarting the game after it has finished.
+ */ 
 public class GameOver : MonoBehaviour {
 	
 

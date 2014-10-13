@@ -20,6 +20,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using UnityEngine;
 using System.Collections;
 
+/*
+ * used for recording what happened during the turn (um... duh)
+ */ 
 public class TurnRecord : MonoBehaviour {
 
 	private int gold, materials, food, population, environment, foodGenerated, materialsGenerated;

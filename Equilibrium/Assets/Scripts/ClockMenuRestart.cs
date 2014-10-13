@@ -20,6 +20,9 @@ using UnityEngine;
 using System;
 using TouchScript.Gestures;
 
+/*
+ * Restart button on the clock menu, restarts the game (duh)
+ */ 
 public class ClockMenuRestart : MonoBehaviour {
 
 	// Use this for initialization

@@ -19,6 +19,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using UnityEngine;
 using System.Collections;
 
+/*
+ * list of tags for the game, allows easy access.
+ */ 
 public class Tags : MonoBehaviour {
 	
 	public const string Built = "Built";

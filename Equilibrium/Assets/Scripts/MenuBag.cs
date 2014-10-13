@@ -19,6 +19,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using UnityEngine;
 using System.Collections;
 
+/*
+ * used for starting the game.
+ */ 
 public class MenuBag : MonoBehaviour {
 	public GameObject world;
 	private int bagCount;

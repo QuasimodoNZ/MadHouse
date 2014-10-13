@@ -19,6 +19,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using UnityEngine;
 using System.Collections;
 
+/*
+ * building menum has remove and improve buttons
+ */ 
 public class Popup : MonoBehaviour {
 
 	private GameObject target;
@@ -39,6 +42,9 @@ public class Popup : MonoBehaviour {
 		target.name = target.name + "+";
 	}
 
+	/*
+	 * destroys building and refunds half of material costs
+	 */ 
 	public void remove(){
 		var controller = GameObject.FindGameObjectWithTag (Tags.GameController);
 		var clock = controller.GetComponent<Clock> ();

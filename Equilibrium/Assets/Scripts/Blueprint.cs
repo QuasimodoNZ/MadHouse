@@ -21,6 +21,10 @@ using System;
 
 using System.Collections;
 
+/**
+ * represents what tiles the buildings can be built on
+ * gives visual feedback during building placement.
+ */ 
 public class Blueprint : MonoBehaviour
 {
 		public static float tileSize = 1.0f;
@@ -55,6 +59,9 @@ public class Blueprint : MonoBehaviour
 				gameObject.transform.position = pos;
 		}
 
+		/**
+		 * colliding with something
+		 */ 
 		void OnTriggerEnter (Collider other)
 		{
 			collidingObjects.Add (other.gameObject);
@@ -64,6 +71,9 @@ public class Blueprint : MonoBehaviour
 			Debug.Log (collidingObjects.Count);
 		}
 
+		/**
+		 * still colliding with something
+		 */ 
 		void OnTriggerStay (Collider other)
 		{
 			if (!collidingObjects.Contains (other.gameObject)){
@@ -74,6 +84,9 @@ public class Blueprint : MonoBehaviour
 			}
 		}
 
+		/**
+		 * not colliding any more
+		 */ 
 		void OnTriggerExit (Collider other)
 		{
 				collidingObjects.Remove (other.gameObject);	
@@ -83,6 +96,9 @@ public class Blueprint : MonoBehaviour
 			Debug.Log (collidingObjects.Count);
 		}
 
+		/**
+		 * returns a bool that checks if the building is colliding with something
+		 */ 
 		public bool isColliding ()
 		{
 				bool colliding = false;
