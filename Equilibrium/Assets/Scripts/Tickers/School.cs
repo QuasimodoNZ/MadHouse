@@ -25,13 +25,10 @@ public class School : BuildingTicker
 	
 	public override void tick (Clock c)
 		{
-				//c.eatFood (upkeep);
-				//c.spendGold (enviormentDamage);
 				c.ruinEnvironment (buildings.SchoolDamage);
 				c.schoolCounter ();
 				c.generateGold (buildings.SchoolGold);
 		}
-
 	
 	public override bool canCollideWith (GameObject other){
 		

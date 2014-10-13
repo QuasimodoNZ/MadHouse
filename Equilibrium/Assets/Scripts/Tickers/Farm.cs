@@ -26,8 +26,6 @@ public class Farm : BuildingTicker
 
 	public override void tick (Clock c)
 		{
-				//c.eatFood (upkeep);
-				//c.spendGold (enviormentDamage);
 				c.ruinEnvironment (buildings.FarmDamage);
 				c.generateGold (buildings.FarmGold);
 				c.generateFood (buildings.FarmFood);

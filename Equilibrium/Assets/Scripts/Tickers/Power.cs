@@ -25,8 +25,6 @@ public class Power : BuildingTicker
 	
 	public override void tick (Clock c)
 		{
-				//c.eatFood (upkeep);
-				//c.spendGold (enviormentDamage);
 				c.ruinEnvironment (buildings.PowerDamage);
 				c.generateGold (buildings.PowerGold);
 				c.powerCounter ();

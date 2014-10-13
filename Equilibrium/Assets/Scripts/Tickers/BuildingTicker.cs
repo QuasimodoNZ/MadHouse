@@ -19,10 +19,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using UnityEngine;
 using System.Collections;
 
+/**
+ * base class for all buildings
+ */ 
 public abstract class BuildingTicker : MonoBehaviour
 {		
+	/**
+	 * has the effects of each building to different parts of the game
+	 */ 
 	abstract public void tick (Clock c);
 
+	/**
+	 * collider that specifies which tiles the building can be built on
+	 */ 
 	public abstract bool canCollideWith (GameObject other);
 
 }

@@ -25,8 +25,6 @@ public class City : BuildingTicker
 
 		public override void tick (Clock c)
 		{
-			//c.eatFood (upkeep);
-			//c.spendGold (enviormentDamage);
 			c.ruinEnvironment (buildings.CityDamage);
 			c.generateGold (buildings.CityGold);
 		}

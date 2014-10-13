@@ -25,8 +25,6 @@ public class Factory : BuildingTicker
 	
 		public override void tick (Clock c)
 		{
-				//c.eatFood (upkeep);
-				//c.spendGold (enviormentDamage);
 				c.ruinEnvironment (buildings.FactoryDamage);
 				c.generateGold (buildings.FactoryGold);
 				c.factoryCounter ();
