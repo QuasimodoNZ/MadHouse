@@ -1,5 +1,5 @@
 Hello from Madhouse Studios!
-We are: Manson Chen, Woodrow Cizadlo, David Wesson, Peter Andrews and Benjamin Riddell.
+We are: Manson Chen, Woodrow Cizadlo, David Wesson, Peter Alexander and Benjamin Riddell.
 This game was a project for our third-year software engineering course for Agile development.
 It represents about 8 full days of actual programming work, due to the limitations of the course. Please note that we were not familiar with Unity when development started! This is not excellent code! It is code that mostly works.
 
